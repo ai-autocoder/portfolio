@@ -307,8 +307,8 @@ link {
   background-color: $background-dark-secondary;
 
   .project-screenshot {
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: auto;
   }
   .project-title {
     padding: 1rem;
@@ -316,7 +316,6 @@ link {
   .project-technology {
     padding: 1rem;
   }
-
   .project-description {
     padding: 1rem;
   }
