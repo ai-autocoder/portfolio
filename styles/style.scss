@@ -391,6 +391,19 @@ link {
 }
 
 // media queries
+
+@media screen and (min-width: 375px) {
+  .title {
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .title {
+    letter-spacing: 0.2rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   #open-menu-btn,
   #close-menu-btn {
