@@ -112,19 +112,6 @@ p {
 .banner {
 	margin: auto;
 }
-.title-container {
-	display: flex;
-	justify-content: center;
-}
-.title {
-	margin-bottom: 10vh;
-	font-family: $main-font-family;
-	font-size: clamp(1.6rem, calc(1.6rem + ((1vw - 0.2rem) * 3.4286)), 4rem);
-	line-height: clamp(35.2px, calc(2.2rem + ((1vw - 3.2px) * 4)), 80px);
-	.title-span {
-		color: $accent-1;
-	}
-}
 
 .icons {
 	display: grid;
@@ -134,38 +121,65 @@ p {
 	justify-items: center;
 }
 
-// tooltip
-.tooltiptext {
-	font-size: 0.5em;
-	font-family: $main-font-family;
-	font-style: italic;
-	font-weight: 500;
-	text-transform: capitalize;
-	color: $accent-1;
-	text-shadow: 0px 0px 10px #000000;
-	text-align: center;
-	padding: 5px 5px;
-	position: absolute;
-	z-index: 1;
-	bottom: 110%;
-	left: 50%;
-	transform: translateX(-50%);
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-.fab:nth-child(1n + 5) .tooltiptext {
+.icon-container:nth-child(1n + 5) .banner-tooltip {
 	top: 110%;
 	bottom: unset;
 	left: 50%;
 }
-.fab {
+
+.icon-container {
 	position: relative;
-	transition: color 0.3s;
-	&:hover {
+
+	.banner-tooltip {
+		font-size: 0.5em;
+		font-family: $main-font-family;
+		font-style: italic;
+		font-weight: 500;
+		text-transform: capitalize;
+		text-wrap: nowrap;
 		color: $accent-1;
+		text-shadow: 0px 0px 10px #000000;
+		text-align: center;
+		padding: 5px 5px;
+		position: absolute;
+		z-index: 1;
+		bottom: 110%;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: opacity 0.3s;
+		cursor: default;
 	}
-	&:hover .tooltiptext {
+
+	&:has(svg:hover) .banner-tooltip {
 		opacity: 1;
+	}
+	// &:hover .banner-tooltip {
+	// 	opacity: 1;
+	// }
+	svg {
+		width: 1.125em;
+		height: 1.125em;
+		fill: white;
+		transition: fill 0.3s;
+	}
+	svg:hover {
+		fill: $accent-1;
+	}
+}
+
+.title-container {
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	margin-bottom: 10vh;
+	font-family: $main-font-family;
+	font-size: clamp(1.6rem, calc(1.6rem + ((1vw - 0.2rem) * 3.4286)), 4rem);
+	line-height: clamp(35.2px, calc(2.2rem + ((1vw - 3.2px) * 4)), 80px);
+	.title-span {
+		color: $accent-1;
 	}
 }
 
@@ -420,7 +434,7 @@ link {
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	.fab:nth-child(1n + 5) .tooltiptext {
+	.icon-container:nth-child(1n + 5) .banner-tooltip {
 		top: unset;
 		bottom: 110%;
 	}
