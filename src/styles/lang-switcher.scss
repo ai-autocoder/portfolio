@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+.onoffswitch {
+	position: relative;
+	width: 100px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.onoffswitch-checkbox {
+	display: none;
+}
+.onoffswitch-label {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid hsla(0, 0%, 0%, 0);
+	border-radius: 20px;
+	transition: all 0.3s ease-out;
+	&:hover {
+		border: 2px solid $accent-1;
+	}
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 30px;
+	padding: 0;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+	content: "en";
+	margin-left: 0px;
+	color: #ffffff;
+}
+.onoffswitch-inner:after {
+	content: "it";
+	color: #ffffff;
+}
+#lang-switch + .onoffswitch-label .onoffswitch-inner {
+	display: block;
+	width: 100%;
+	margin-left: 0;
+}
+.onoffswitch-switch {
+	display: block;
+	width: 50px;
+	margin: 0px;
+	background: $background-dark-secondary;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 50%;
+	border-radius: 20px;
+	transition: all 0.3s ease-out;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+	right: 0px;
+}

@@ -50,9 +50,25 @@
 					</svg>
 				</div>
 				<ul class="nav-links">
-					<li><a href="#about" class="link-text">About</a></li>
-					<li><a href="#projects" class="link-text">Projects</a></li>
-					<li><a href="#contact" class="link-text">Contact</a></li>
+					<li>
+						<div class="onoffswitch">
+							<input
+								type="checkbox"
+								name="onoffswitch"
+								class="onoffswitch-checkbox"
+								id="lang-switch"
+							/>
+							<label class="onoffswitch-label" for="lang-switch">
+								<span class="onoffswitch-inner"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+					</li>
+					<li><a id="about" href="#about" class="link-text">About</a></li>
+					<li>
+						<a id="projects" href="#projects" class="link-text">Projects</a>
+					</li>
+					<li><a id="contact" href="#contact" class="link-text">Contact</a></li>
 				</ul>
 			</nav>
 			<div class="banner">
@@ -224,7 +240,6 @@
 		</section>
 		<!-- projects -->
 		<section class="section projects" id="projects">
-			<!-- <div class="section-container"> -->
 			<h2 class="projects-header">SOME OF MY PROJECTS</h2>
 			<div class="cards-container">
 				<article class="project-card">

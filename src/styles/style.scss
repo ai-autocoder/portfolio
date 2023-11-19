@@ -1,19 +1,5 @@
-// VARIABLES
-
-$main-font-family: "Roboto", sans-serif;
-$accent-1: #ff5722;
-$btn-filled-hoover: rgb(255, 146, 83);
-$btn-outlined-hoover: rgba(255, 116, 33, 0.1);
-$btn-outlined-active: rgba(255, 116, 33, 0.4);
-$background-dark: #181a1b;
-$background-dark-secondary: #3b3b3b;
-$color-dark: #e8e6e3;
-$shadow-z2: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-	0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-$shadow-z8: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
-	0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-$shadow-z16: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px,
-	rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+@import "variables.scss";
+@import "lang-switcher.scss";
 
 :root {
 	scroll-behavior: smooth;
@@ -60,6 +46,7 @@ p {
 
 .nav {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	position: fixed;
 	top: 0;
@@ -73,6 +60,9 @@ p {
 	.nav-links {
 		list-style-type: none;
 		text-align: center;
+		:nth-child(1) {
+			margin: auto auto auto 2rem;
+		}
 	}
 	a {
 		display: block;
