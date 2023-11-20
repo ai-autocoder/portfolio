@@ -3,6 +3,7 @@
 .onoffswitch {
 	position: relative;
 	width: 100px;
+	margin: 7vh auto 10vh;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -61,4 +62,9 @@
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
 	right: 0px;
+}
+@media screen and (min-width: 768px) {
+	.onoffswitch {
+		margin: 0;
+	}
 }
