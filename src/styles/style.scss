@@ -72,7 +72,6 @@ p {
 		text-transform: uppercase;
 		font-size: 1.2rem;
 		color: white;
-		display: block;
 		padding: 1.5rem 3rem;
 		transition: all 0.3s;
 	}
@@ -91,7 +90,6 @@ p {
 .header {
 	color: white;
 	min-height: 100vh;
-	// gap: 10vh;
 	background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), rgba(0, 0, 0, 0.5)),
 		url(../media/img/header.jpg);
 	background-color: black;
@@ -169,20 +167,6 @@ svg:hover {
 	line-height: clamp(35.2px, calc(2.2rem + ((1vw - 3.2px) * 4)), 80px);
 	.title-span {
 		color: $accent-1;
-	}
-}
-
-.arrow-button {
-	position: absolute;
-	bottom: 3rem;
-	animation-name: bouncingArrow;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	padding: 0.5rem;
-	transition: all 0.3s;
-	i {
-		font-size: 1.5em;
 	}
 }
 
@@ -348,43 +332,6 @@ link {
 	}
 }
 
-/* Animation arrow button */
-@keyframes bouncingArrow {
-	0% {
-		transform: translateY(0);
-	}
-	10% {
-		transform: translateY(0.22rem);
-	}
-	20% {
-		transform: translateY(0.4375rem);
-	}
-	30% {
-		transform: translateY(0.875rem);
-	}
-	40% {
-		transform: translateY(1.75rem);
-	}
-	50% {
-		transform: translateY(3.5rem);
-	}
-	60% {
-		transform: translateY(1.75rem) scale(1.2, 0.8);
-	}
-	70% {
-		transform: translateY(0.875rem) scale(1.1, 0.9);
-	}
-	80% {
-		transform: translateY(0.4375rem) scale(1.05, 0.95);
-	}
-	90% {
-		transform: translateY(0.22rem);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
 // media queries
 
 @media screen and (min-width: 375px) {
@@ -405,7 +352,6 @@ link {
 		display: none;
 	}
 	.nav {
-		// background-color: hsla(0, 0%, 0%, 0);
 		background: linear-gradient(
 			rgba(0, 0, 0, 0.9) 0%,
 			rgba(0, 0, 0, 0.9) 70%,
