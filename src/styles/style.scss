@@ -1,6 +1,10 @@
 @import "variables.scss";
 @import "lang-switcher.scss";
 
+.no-break {
+	white-space: nowrap;
+}
+
 :root {
 	scroll-behavior: smooth;
 	font-family: $main-font-family;

@@ -1,5 +1,31 @@
 {
-	"about": "Profilo",
-	"projects": "Progetti",
-	"contact": "Contattami"
+	"nav": {
+		"about": "Chi Sono",
+		"projects": "Progetti",
+		"contact": "Contattami"
+	},
+	"banner": {
+		"greeting": "Benvenuti!",
+		"intro": "Sono",
+		"profession": ["Specialista in", "Sviluppo Web Front-End"]
+	},
+	"about": {
+		"title": "CHI SONO",
+		"text": [
+			"Sono uno sviluppatore web front-end con sede a Slough, Regno Unito, specializzato in soluzioni web innovative per aziende di livello enterprise.",
+			"Con competenze avanzate in HTML5, CSS/SCSS, JavaScript, e framework come React, Angular e Vue, mi dedico a creare esperienze utente eccezionali che si integrano perfettamente con obiettivi aziendali complessi.",
+			"La mia passione per la tecnologia, unita a un forte senso del problem solving e dell'innovazione, mi rende un asset strategico per team che cercano di superare le sfide del web moderno in contesti aziendali."
+		]
+	},
+	"projects": {
+		"header": "ALCUNI MIEI PROGETTI"
+	},
+	"contact": {
+		"title": "CONTATTAMI",
+		"form": {
+			"name": "Nome",
+			"message": "Messaggio",
+			"send": "Invia"
+		}
+	}
 }

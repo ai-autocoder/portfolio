@@ -64,20 +64,28 @@
 							</label>
 						</div>
 					</li>
-					<li><a id="about" href="#about" class="link-text">About</a></li>
+					<li><a id="nav-about" href="#about" class="link-text">About</a></li>
 					<li>
-						<a id="projects" href="#projects" class="link-text">Projects</a>
+						<a id="nav-projects" href="#projects" class="link-text">Projects</a>
 					</li>
-					<li><a id="contact" href="#contact" class="link-text">Contact</a></li>
+					<li>
+						<a id="nav-contact" href="#contact" class="link-text">Contact</a>
+					</li>
 				</ul>
 			</nav>
 			<div class="banner">
 				<div class="title-container">
 					<h1 class="title">
-						Hi,<br />
-						I`m Francesco Anzalone,<br />
-						a
-						<span class="title-span">front-end web dev</span>
+						<span id="banner-greeting">Welcome!</span>
+						<br />
+						<span id="banner-intro">I`m</span>
+						<span class="no-break">Francesco Anzalone,</span>
+						<br />
+						<span id="banner-profession" class="title-span">
+							Specialist in
+							<br />
+							Front-End Web Development
+						</span>
 					</h1>
 				</div>
 				<!-- icons -->
@@ -212,9 +220,9 @@
 		</header>
 		<!-- about -->
 		<section class="section about" id="about">
-			<h2 class="about-title">ABOUT ME</h2>
+			<h2 id="about-title" class="about-title">ABOUT ME</h2>
 			<div class="about-text">
-				<p>
+				<p id="about-text">
 					I am a front-end web developer based in Slough, UK. <br />
 					As a tech enthusiast, I am passionate about programming. <br />
 					In my spare time, I enjoy video games, learning new skills as a
@@ -240,7 +248,7 @@
 		</section>
 		<!-- projects -->
 		<section class="section projects" id="projects">
-			<h2 class="projects-header">SOME OF MY PROJECTS</h2>
+			<h2 id="projects-header">SOME OF MY PROJECTS</h2>
 			<div class="cards-container">
 				<article class="project-card">
 					<picture>
@@ -299,13 +307,13 @@
 		</section>
 		<!-- contact -->
 		<footer class="section contact" id="contact">
-			<h2 class="footer-title">CONTACT ME</h2>
+			<h2 id="footer-title" class="footer-title">CONTACT ME</h2>
 			<form action="https://formspree.io/f/mwkybgav" method="POST">
 				<input
 					type="text"
 					name="your-name"
 					value=""
-					id="name"
+					id="form-name"
 					placeholder="Your Name"
 					required
 				/>
@@ -313,7 +321,7 @@
 					type="email"
 					name="email"
 					value=""
-					id="email"
+					id="form-email"
 					aria-required="true"
 					aria-invalid="true"
 					placeholder="Email"
@@ -322,12 +330,12 @@
 				<textarea
 					name="message"
 					rows="8"
-					id="message"
+					id="form-message"
 					aria-invalid="false"
 					placeholder="Message"
 					required
 				></textarea>
-				<button type="submit" class="button-filled">Send</button>
+				<button type="submit" id="form-send" class="button-filled">Send</button>
 			</form>
 		</footer>
 		<script type="module" src="./index.js"></script>

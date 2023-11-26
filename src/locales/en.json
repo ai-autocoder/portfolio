@@ -1,5 +1,31 @@
 {
-	"about": "About",
-	"projects": "Projects",
-	"contact": "Contact"
+	"nav": {
+		"about": "About",
+		"projects": "Projects",
+		"contact": "Contact"
+	},
+	"banner": {
+		"greeting": "Welcome!",
+		"intro": "I`m",
+		"profession": ["Specialist in", "Front-End Web Development"]
+	},
+	"about": {
+		"title": "ABOUT ME",
+		"text": [
+			"I am a front-end web developer based in Slough, United Kingdom, specializing in innovative web solutions for enterprise-level businesses.",
+			"With advanced skills in HTML5, CSS/SCSS, JavaScript, and frameworks like React, Angular, and Vue, I am committed to creating exceptional user experiences that seamlessly align with complex business objectives.",
+			"My passion for technology, coupled with a strong sense of problem-solving and innovation, makes me a strategic asset for teams looking to overcome modern web challenges in corporate settings."
+		]
+	},
+	"projects": {
+		"header": "SOME OF MY PROJECTS"
+	},
+	"contact": {
+		"title": "CONTACT ME",
+		"form": {
+			"name": "Your Name",
+			"message": "Message",
+			"send": "Send"
+		}
+	}
 }
