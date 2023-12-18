@@ -30,6 +30,40 @@ export function initializeI18next() {
 	});
 }
 
+export function updateContent() {
+	const elementsToUpdate = {
+		"nav-about": "nav.about",
+		"nav-projects": "nav.projects",
+		"nav-contact": "nav.contact",
+		"banner-greeting": "banner.greeting",
+		"banner-intro": "banner.intro",
+		"banner-profession": "banner.profession",
+		"about-title": "about.title",
+		"about-text": "about.text",
+		"projects-header": "projects.header",
+		"footer-title": "contact.title",
+		"form-name": "placeholder.attribute.contact.form.name",
+		"form-message": "placeholder.attribute.contact.form.message",
+		"form-send": "contact.form.send",
+	};
+
+	for (const [elementId, translationKey] of Object.entries(elementsToUpdate)) {
+		updateElementContent(elementId, translationKey);
+	}
+}
+
+export function setupLanguageSwitch() {
+	document.getElementById("lang-switch").checked = i18next.language === "en";
+	document.getElementById("lang-switch").addEventListener("click", () => {
+		const currentLanguage = i18next.language;
+		const newLanguage = currentLanguage === "en" ? "it" : "en";
+		i18next.changeLanguage(newLanguage);
+	});
+	i18next.on("languageChanged", () => {
+		updateContent();
+	});
+}
+
 function updateElementContent(id, key) {
 	const element = document.getElementById(id);
 	if (element) {
@@ -50,27 +84,5 @@ function updateElementContent(id, key) {
 		}
 	} else {
 		console.warn(`Element with id '${id}' not found.`);
-	}
-}
-
-export function updateContent() {
-	const elementsToUpdate = {
-		"nav-about": "nav.about",
-		"nav-projects": "nav.projects",
-		"nav-contact": "nav.contact",
-		"banner-greeting": "banner.greeting",
-		"banner-intro": "banner.intro",
-		"banner-profession": "banner.profession",
-		"about-title": "about.title",
-		"about-text": "about.text",
-		"projects-header": "projects.header",
-		"footer-title": "contact.title",
-		"form-name": "placeholder.attribute.contact.form.name",
-		"form-message": "placeholder.attribute.contact.form.message",
-		"form-send": "contact.form.send",
-	};
-
-	for (const [elementId, translationKey] of Object.entries(elementsToUpdate)) {
-		updateElementContent(elementId, translationKey);
 	}
 }

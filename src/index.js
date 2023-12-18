@@ -1,21 +1,12 @@
-import { initializeI18next, updateContent } from "./locales/language.js";
-import i18next from "i18next";
+import {
+	initializeI18next,
+	updateContent,
+	setupLanguageSwitch,
+} from "./locales/language.js";
 
 initializeI18next().then(() => {
 	updateContent();
-});
-
-i18next.on("languageChanged", () => {
-	updateContent();
-});
-
-// Language switch
-
-document.getElementById("lang-switch").checked = i18next.language === "en";
-document.getElementById("lang-switch").addEventListener("click", () => {
-	const currentLanguage = i18next.language;
-	const newLanguage = currentLanguage === "en" ? "it" : "en";
-	i18next.changeLanguage(newLanguage);
+	setupLanguageSwitch();
 });
 
 // Nav open / close
