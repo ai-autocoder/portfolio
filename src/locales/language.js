@@ -53,12 +53,14 @@ export function updateContent() {
 }
 
 export function setupLanguageSwitch() {
-	document.getElementById("lang-switch").checked = i18next.language === "en";
+	document.getElementById("lang-switch").checked =
+		i18next.language.startsWith("en");
+
 	document.getElementById("lang-switch").addEventListener("click", () => {
-		const currentLanguage = i18next.language;
-		const newLanguage = currentLanguage === "en" ? "it" : "en";
+		const newLanguage = i18next.language.startsWith("en") ? "it" : "en";
 		i18next.changeLanguage(newLanguage);
 	});
+
 	i18next.on("languageChanged", () => {
 		updateContent();
 	});
