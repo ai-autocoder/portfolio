@@ -54,14 +54,14 @@
 	margin: 0px;
 	background: $background-dark-secondary;
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 50%;
+	top: 2px;
+	bottom: 2px;
+	right: 48px;
 	border-radius: 20px;
 	transition: all 0.3s ease-out;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-	right: 0px;
+	right: 2px;
 }
 @media screen and (min-width: 768px) {
 	.onoffswitch {
