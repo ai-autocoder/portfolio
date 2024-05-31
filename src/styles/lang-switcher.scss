@@ -35,12 +35,12 @@
 	box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-	content: "en";
+	content: "it";
 	margin-left: 0px;
 	color: #ffffff;
 }
 .onoffswitch-inner:after {
-	content: "it";
+	content: "en";
 	color: #ffffff;
 }
 #lang-switch + .onoffswitch-label .onoffswitch-inner {
