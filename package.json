@@ -1,19 +1,31 @@
 {
 	"name": "my-website",
+	"version": "1.0.0",
 	"source": "src/index.html",
 	"browserslist": "> 0.5%, last 2 versions, not dead",
+	"type": "module",
 	"scripts": {
-		"start": "parcel --open chrome",
-		"build": "parcel build"
+		"start": "parcel",
+		"start-chrome": "parcel --open chrome",
+		"build": "parcel build",
+		"lint": "eslint src"
 	},
 	"devDependencies": {
-		"@parcel/packager-raw-url": "^2.10.0",
-		"@parcel/transformer-sass": "^2.10.0",
-		"@parcel/transformer-webmanifest": "^2.10.0",
+		"@eslint/js": "^9.3.0",
+		"@parcel/packager-raw-url": "^2.12.0",
+		"@parcel/transformer-sass": "^2.12.0",
+		"@parcel/transformer-webmanifest": "^2.12.0",
+		"eslint": "^9.3.0",
+		"globals": "^15.3.0",
 		"parcel": "latest"
 	},
 	"dependencies": {
 		"i18next": "^23.11.5",
 		"i18next-browser-languagedetector": "8.0.0"
-	}
+	},
+	"keywords": [
+		"portfolio",
+		"web development"
+	],
+	"author": "Francesco Anzalone <francesco.a@mail.com>"
 }
