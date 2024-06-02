@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Francesco`s portfolio</title>
 		<meta name="description" content="Front-End Web Developer" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="./styles/style.scss" />
 		<!-- Roboto fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -221,7 +225,7 @@
 		<!-- about -->
 		<section class="section about" id="about">
 			<h2 id="about-title" class="about-title">ABOUT ME</h2>
-			<div class="about-text">
+			<div class="about-text-card">
 				<p id="about-text">
 					I am a front-end web developer based in Slough, UK. <br />
 					As a tech enthusiast, I am passionate about programming. <br />
@@ -249,60 +253,69 @@
 		<!-- projects -->
 		<section class="section projects" id="projects">
 			<h2 id="projects-header">SOME OF MY PROJECTS</h2>
-			<div class="cards-container">
-				<article class="project-card">
-					<picture>
-						<source
-							type="image/webp"
-							srcset="
-								./media/img/project-planner/Project%20planner%20preview.webp
-							"
-						/>
-						<source
-							type="image/jpeg"
-							srcset="
-								./media/img/project-planner/Project%20planner%20preview.jpg
-							"
-						/>
-						<img
-							class="project-screenshot"
-							src="./media/img/project-planner/Project%20planner%20preview.jpg"
-							alt="Project planner screenshot"
-							width="613"
-							height="461"
-						/>
-					</picture>
-					<h3 class="project-title">Project/task planner</h3>
-					<div class="project-technology">
-						<ul>
-							<li>Html5</li>
-							<li>Css (Sass)</li>
-							<li>Javascript</li>
-						</ul>
+			<!-- #MARK: Swiper -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<article class="project-card">
+							<div class="project-screenshot-container">
+								<picture>
+									<source
+										type="image/webp"
+										srcset="
+											./media/img/project-planner/Project%20planner%20preview.webp
+										"
+									/>
+									<source
+										type="image/jpeg"
+										srcset="
+											./media/img/project-planner/Project%20planner%20preview.jpg
+										"
+									/>
+									<img
+										class="project-screenshot"
+										src="./media/img/project-planner/Project%20planner%20preview.jpg"
+										alt="Project planner screenshot"
+										width="613"
+										height="461"
+									/>
+								</picture>
+							</div>
+							<div class="project-technology-list">
+								<span>Html5</span>
+								<span>Css (Sass)</span>
+								<span>Javascript</span>
+							</div>
+							<h3 class="project-title">Project/task planner</h3>
+
+							<p class="project-description">
+								Designed and written from scratch using HTML5, custom CSS styles
+								with Sass, Javascript. Using Javascript to store data on the
+								browser`s localStorage, calculate the time required and the
+								estimated finish date, manipulate the DOM dynamically as tasks
+								are added, deleted, or completed.
+							</p>
+							<div class="project-links">
+								<a
+									class="button-filled"
+									href="https://project-planner-preview.netlify.app/"
+									target="_blank"
+									rel="noopener noreferrer"
+									>View live</a
+								><a
+									class="button-text"
+									href="https://github.com/ai-autocoder/project-planner"
+									target="_blank"
+									rel="noopener noreferrer"
+									>GitHub</a
+								>
+							</div>
+						</article>
 					</div>
-					<p class="project-description">
-						Designed and written from scratch using HTML5, custom CSS styles
-						with Sass, Javascript. Using Javascript to store data on the
-						browser`s localStorage, calculate the time required and the
-						estimated finish date, manipulate the DOM dynamically as tasks are
-						added, deleted, or completed.
-					</p>
-					<div class="project-links">
-						<a
-							class="button-filled"
-							href="https://project-planner-preview.netlify.app/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>View live</a
-						><a
-							class="button-text"
-							href="https://github.com/ai-autocoder/project-planner"
-							target="_blank"
-							rel="noopener noreferrer"
-							>GitHub</a
-						>
-					</div>
-				</article>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</section>
 		<!-- contact -->
