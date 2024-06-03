@@ -1,0 +1,37 @@
+.button-primary,
+.button-secondary {
+	font-family: $main-font-family;
+	display: block;
+	padding: 0.8em 2em;
+	border-radius: 40px;
+	text-decoration: none;
+	line-height: normal;
+	font-size: $main-font-size;
+	transition: all 0.3s;
+}
+
+.button-secondary,
+.button-secondary {
+	color: $accent-1;
+	&:hover {
+		background-color: $btn-secondary-hover-background;
+		filter: brightness(1.2);
+	}
+	&:active {
+		filter: brightness(0.6);
+	}
+}
+
+.button-primary {
+	color: white;
+	border: none;
+	background-color: $accent-1;
+	box-shadow: $shadow-z2;
+	&:hover {
+		filter: brightness(1.6);
+		box-shadow: $shadow-z8;
+	}
+	&:active {
+		filter: brightness(0.6);
+	}
+}

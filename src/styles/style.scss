@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "buttons.scss";
 @import "lang-switcher.scss";
 @import "swiper.scss";
 
@@ -9,7 +10,7 @@
 :root {
 	scroll-behavior: smooth;
 	font-family: $main-font-family;
-	font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.3571)), 20px);
+	font-size: $main-font-size;
 }
 
 *,
@@ -187,55 +188,6 @@ svg:hover {
 	}
 }
 
-.button-text,
-.button-filled,
-.button-outlined,
-link {
-	display: block;
-	padding: 0.8em 2em;
-	border-radius: 40px;
-	text-decoration: none;
-	line-height: normal;
-	font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.3571)), 20px);
-	transition: all 0.3s;
-}
-
-.button-text {
-	color: $accent-1;
-	&:hover {
-		background-color: $btn-outlined-hoover;
-	}
-	&:active {
-		filter: brightness(0.6);
-		background-color: $btn-outlined-active;
-	}
-}
-
-.button-filled {
-	color: white;
-	border: none;
-	background-color: $accent-1;
-	box-shadow: $shadow-z2;
-	&:hover {
-		background-color: $btn-filled-hoover;
-		box-shadow: $shadow-z8;
-	}
-	&:active {
-		filter: brightness(0.6);
-	}
-}
-
-.button-outlined {
-	color: $accent-1;
-	border: 1px solid $accent-1;
-	&:hover {
-		background-color: $btn-outlined-hoover;
-	}
-	&:active {
-		background-color: $btn-outlined-active;
-	}
-}
-
 #open-menu-btn {
 	margin: 1rem;
 	position: absolute;
@@ -312,9 +264,11 @@ link {
 	.project-screenshot-container {
 		height: 250px;
 		overflow: hidden;
-		border-radius: 20px;
-		margin: 1rem 1rem 0;
-		width: calc(100% - 2rem);
+		// border-radius: 20px;
+		// margin: 1rem 1rem 0;
+		// width: calc(100% - 2rem);
+		margin: 0;
+		width: 100%;
 	}
 
 	.project-screenshot {
@@ -352,7 +306,7 @@ link {
 	input,
 	textarea {
 		width: 100%;
-		margin: 0.25rem 0;
+		margin-bottom: 0.5rem;
 		padding: 0.5rem;
 		font-family: $main-font-family;
 		font-size: inherit;
@@ -360,10 +314,6 @@ link {
 		background-color: $background-dark-secondary;
 		border: 1px solid grey;
 		border-radius: 5px;
-	}
-	.button-filled {
-		margin: 5px 0;
-		font-family: $main-font-family;
 	}
 }
 
