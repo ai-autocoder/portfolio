@@ -236,16 +236,18 @@
 			<div class="about-links">
 				<a
 					href="https://github.com/ai-autocoder"
-					class="button-outlined"
+					class="button-secondary"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="Visit my GitHub profile (opens in a new tab)"
 					>GitHub</a
 				>
 				<a
 					href="https://linkedin.com/in/f-anzalone"
-					class="button-outlined"
+					class="button-secondary"
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="Visit my LinkedIn profile (opens in a new tab)"
 					>Linkedin</a
 				>
 			</div>
@@ -297,16 +299,18 @@
 							</p>
 							<div class="project-links">
 								<a
-									class="button-filled"
+									class="button-primary"
 									href="https://project-planner-preview.netlify.app/"
 									target="_blank"
 									rel="noopener noreferrer"
+									aria-label="View live preview of the project (opens in a new tab)"
 									>View live</a
 								><a
-									class="button-text"
+									class="button-secondary"
 									href="https://github.com/ai-autocoder/project-planner"
 									target="_blank"
 									rel="noopener noreferrer"
+									aria-label="Visit the project's GitHub repository (opens in a new tab)"
 									>GitHub</a
 								>
 							</div>
@@ -348,7 +352,14 @@
 					placeholder="Message"
 					required
 				></textarea>
-				<button type="submit" id="form-send" class="button-filled">Send</button>
+				<button
+					type="submit"
+					id="form-send"
+					class="button-primary"
+					aria-label="Send contact form"
+				>
+					Send
+				</button>
 			</form>
 		</footer>
 		<script type="module" src="./index.js"></script>

@@ -1,8 +1,7 @@
 $main-font-family: "Roboto", sans-serif;
+$main-font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.3571)), 20px);
 $accent-1: #ff5722;
-$btn-filled-hoover: rgb(255, 146, 83);
-$btn-outlined-hoover: rgba(255, 116, 33, 0.1);
-$btn-outlined-active: rgba(255, 116, 33, 0.4);
+$btn-secondary-hover-background: rgba(255, 116, 33, 0.2);
 $background-dark: hsl(0, 0%, 0%);
 $background-dark-secondary: hsl(0, 0%, 20%);
 $border-radius: 20px;
