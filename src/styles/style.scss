@@ -264,9 +264,6 @@ svg:hover {
 	.project-screenshot-container {
 		height: 250px;
 		overflow: hidden;
-		// border-radius: 20px;
-		// margin: 1rem 1rem 0;
-		// width: calc(100% - 2rem);
 		margin: 0;
 		width: 100%;
 	}
@@ -382,15 +379,8 @@ svg:hover {
 		padding: 1rem 2rem;
 	}
 
-	.project-card {
-		.project-screenshot-container {
-			margin: 2rem 2rem 0;
-			width: calc(100% - 4rem);
-		}
-
-		.project-links {
-			padding: 1rem 2rem 2rem;
-		}
+	.project-card .project-links {
+		padding: 1rem 2rem 2rem;
 	}
 }
 
