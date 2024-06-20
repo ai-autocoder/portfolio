@@ -30,4 +30,9 @@
 	height: 100%;
 	position: relative;
 	box-sizing: border-box;
+	border-radius: 20px;
+
+	&.swiper-slide-active {
+		box-shadow: $shadow-card;
+	}
 }
