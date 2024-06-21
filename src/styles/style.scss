@@ -265,7 +265,7 @@ svg:hover {
 	}
 
 	.project-screenshot-container {
-		height: 250px;
+		max-height: 150px;
 		overflow: hidden;
 		margin: 0;
 		width: 100%;
@@ -277,7 +277,8 @@ svg:hover {
 		object-fit: cover;
 	}
 	.project-title {
-		padding: 1rem;
+		padding: 1rem 3.5rem;
+		text-align: center;
 	}
 	.project-description {
 		padding: 1rem;
@@ -372,8 +373,13 @@ svg:hover {
 		padding: 2rem;
 	}
 
-	.project-card .project-description {
-		padding: 1rem 2rem;
+	.project-card {
+		.project-description {
+			padding: 1rem 2rem;
+		}
+		.project-screenshot-container {
+			max-height: 250px;
+		}
 	}
 
 	.project-card .project-links {

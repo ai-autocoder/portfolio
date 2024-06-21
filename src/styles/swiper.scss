@@ -5,11 +5,18 @@
 	--swiper-pagination-top: 10px;
 	--swiper-pagination-bottom: auto;
 	--swiper-navigation-sides-offset: 1rem;
+	--swiper-navigation-top-offset: 44%;
 }
 
 .swiper-pagination-bullet-active {
 	--swiper-pagination-bullet-width: 10px;
 	--swiper-pagination-bullet-height: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--swiper-navigation-top-offset: 50%;
+	}
 }
 
 .swiper {
