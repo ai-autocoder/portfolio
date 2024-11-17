@@ -251,16 +251,17 @@ svg:hover {
 	.project-technology-list {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
 		gap: 0.5rem;
 		padding: 1rem 2rem;
 		width: 100%;
 		font-size: 0.75rem;
+		border-radius: 9999px;
 
 		span {
-			background-color: rgba(255, 255, 255, 0.1);
+			color: $accent-1;
+			background: rgba($accent-1, 0.1);
 			padding: 0.25rem 0.5rem;
-			border-radius: $border-radius;
+			border-radius: $border-radius-full;
 		}
 	}
 
