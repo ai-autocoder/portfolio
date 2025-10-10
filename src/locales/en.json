@@ -12,9 +12,11 @@
 	"about": {
 		"title": "ABOUT ME",
 		"text": [
-			"I am a web developer based in Slough, United Kingdom, specializing in innovative web solutions for enterprise-level businesses.",
-			"With advanced skills in HTML5, CSS/SCSS, JavaScript, TypeScript, Node.js, Express, MongoDB, and frameworks like React and Angular, I craft exceptional user experiences that seamlessly align with complex business objectives.",
-			"My passion for technology, coupled with a strong sense of problem-solving and innovation, makes me a strategic asset for teams looking to overcome modern web challenges in corporate settings."
+			"I build web applications that solve real business problems.",
+			"As a Full Stack Developer, I've re-engineered legacy B2B platforms serving major European enterprises, created automated recruitment systems processing thousands of applications, and developed productivity tools used by developers worldwide.",
+			"My technical foundation: React, TypeScript, Node.js, modern DevOps, and a deep understanding of both frontend architecture and backend systems. My differentiator: strategic use of AI development tools to deliver better code, faster.",
+			"I'm not just a developer who codes - I'm a problem-solver who builds systems that scale, workflows that optimize team productivity, and tools that have measurable business impact.",
+			"Published open source contributor. Remote-ready. Available for enterprise software companies seeking developers who deliver results."
 		]
 	},
 	"projects": {
