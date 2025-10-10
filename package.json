@@ -17,7 +17,8 @@
 		"@parcel/transformer-webmanifest": "^2.12.0",
 		"eslint": "^9.3.0",
 		"globals": "^15.3.0",
-		"parcel": "latest"
+		"parcel": "latest",
+		"svgo": "^3.3.2"
 	},
 	"dependencies": {
 		"i18next": "^23.11.5",
