@@ -22,6 +22,59 @@
 	"projects": {
 		"header": "SIDE PROJECTS"
 	},
+	"services": {
+		"title": "SERVICES & EXPERTISE",
+		"items": [
+			{
+				"title": "Full-Stack Development",
+				"description": "Building scalable web applications with modern frameworks (React, Angular, Vue.js) and robust backend systems (Node.js, TypeScript)"
+			},
+			{
+				"title": "B2B Platform Engineering",
+				"description": "Re-engineering legacy systems and developing enterprise-grade solutions for complex business requirements"
+			},
+			{
+				"title": "Developer Tools & Productivity",
+				"description": "Creating VS Code extensions and automation tools that improve team efficiency and workflow optimization"
+			},
+			{
+				"title": "AI-Powered Development",
+				"description": "Leveraging cutting-edge AI tools (GitHub Copilot, Claude Code) to accelerate delivery and enhance code quality"
+			}
+		]
+	},
+	"techStack": {
+		"title": "TECH STACK",
+		"categories": {
+			"frontend": {
+				"title": "Frontend",
+				"technologies": ["React", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS"]
+			},
+			"backend": {
+				"title": "Backend",
+				"technologies": ["Node.js", "Express", "REST APIs", "GraphQL"]
+			},
+			"devops": {
+				"title": "DevOps & Tools",
+				"technologies": ["Git", "Docker", "CI/CD", "Webpack", "Parcel", "npm"]
+			},
+			"other": {
+				"title": "Other",
+				"technologies": ["VS Code Extension API", "Redux", "RxJS", "Agile/Scrum"]
+			}
+		}
+	},
+	"extensions": {
+		"title": "PUBLISHED VS CODE EXTENSIONS",
+		"subtitle": "Developer productivity tools used by thousands worldwide",
+		"stats": {
+			"downloads": "Total Downloads",
+			"users": "Active Users",
+			"rating": "Average Rating",
+			"extensions": "Published Extensions"
+		},
+		"cta": "View on Marketplace"
+	},
 	"contact": {
 		"title": "CONTACT ME",
 		"form": {

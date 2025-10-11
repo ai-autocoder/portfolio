@@ -13,14 +13,67 @@
 		"title": "CHI SONO",
 		"text": [
 			"Realizzo applicazioni web che risolvono problemi aziendali concreti.",
-			"Come Full Stack Developer, ho re-ingegnerizzato piattaforme B2B legacy per grandi aziende europee, creato sistemi di recruiting automatizzati che gestiscono migliaia di candidature e sviluppato strumenti di produttività utilizzati da sviluppatori in tutto il mondo.",
-			"Le mie fondamenta tecniche: React, TypeScript, Node.js, DevOps moderno e una profonda comprensione di architetture frontend e sistemi backend. Il mio elemento distintivo: l'uso strategico di strumenti di sviluppo AI per produrre codice migliore, più velocemente.",
-			"Non sono solo uno sviluppatore che scrive codice - sono un problem-solver che costruisce sistemi scalabili, workflow che ottimizzano la produttività del team e strumenti con un impatto aziendale misurabile.",
-			"Contributor open source pubblicato. Pronto per lavoro remoto. Disponibile per aziende software enterprise che cercano sviluppatori orientati ai risultati."
+			"Come Full Stack Developer, ho modernizzato piattaforme B2B legacy per grandi aziende europee, creato sistemi di recruitment automatizzati che gestiscono migliaia di candidature e sviluppato tool di produttività utilizzati da developer in tutto il mondo.",
+			"Le mie competenze tecniche: React, TypeScript, Node.js, DevOps moderno e una profonda comprensione di architetture frontend e sistemi backend. Ciò che mi distingue: l'uso strategico di tool di sviluppo AI per produrre codice migliore, più velocemente.",
+			"Non sono solo un developer che scrive codice - sono un problem-solver che costruisce sistemi scalabili, workflow che ottimizzano la produttività del team e strumenti con un impatto aziendale misurabile.",
+			"Contributor attivo di progetti open source. Remote-ready. Disponibile per aziende software enterprise che cercano developer orientati ai risultati."
 		]
 	},
 	"projects": {
 		"header": "PROGETTI PERSONALI"
+	},
+	"services": {
+		"title": "SERVIZI & COMPETENZE",
+		"items": [
+			{
+				"title": "Sviluppo Full-Stack",
+				"description": "Sviluppo di applicazioni web scalabili con framework moderni (React, Angular, Vue.js) e sistemi backend robusti (Node.js, TypeScript)"
+			},
+			{
+				"title": "Piattaforme B2B Enterprise",
+				"description": "Modernizzazione di sistemi legacy e sviluppo di soluzioni enterprise per requisiti aziendali complessi"
+			},
+			{
+				"title": "Developer Tools & Produttività",
+				"description": "Creazione di estensioni VS Code e tool di automazione che migliorano l'efficienza del team e ottimizzano i workflow"
+			},
+			{
+				"title": "Sviluppo Potenziato da AI",
+				"description": "Utilizzo di tool AI all'avanguardia (GitHub Copilot, Claude Code) per accelerare la delivery e migliorare la qualità del codice"
+			}
+		]
+	},
+	"techStack": {
+		"title": "STACK TECNOLOGICO",
+		"categories": {
+			"frontend": {
+				"title": "Frontend",
+				"technologies": ["React", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS"]
+			},
+			"backend": {
+				"title": "Backend",
+				"technologies": ["Node.js", "Express", "REST APIs", "GraphQL"]
+			},
+			"devops": {
+				"title": "DevOps & Strumenti",
+				"technologies": ["Git", "Docker", "CI/CD", "Webpack", "Parcel", "npm"]
+			},
+			"other": {
+				"title": "Altro",
+				"technologies": ["VS Code Extension API", "Redux", "RxJS", "Agile/Scrum"]
+			}
+		}
+	},
+	"extensions": {
+		"title": "ESTENSIONI VS CODE PUBBLICATE",
+		"subtitle": "Tool di produttività usati da migliaia di developer in tutto il mondo",
+		"stats": {
+			"downloads": "Download Totali",
+			"users": "Utenti Attivi",
+			"rating": "Rating Medio",
+			"extensions": "Estensioni Pubblicate"
+		},
+		"cta": "Vai al Marketplace"
 	},
 	"contact": {
 		"title": "CONTATTAMI",
