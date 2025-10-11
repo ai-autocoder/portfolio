@@ -1,6 +1,8 @@
+@use "variables";
+
 :root {
-	--swiper-theme-color: #{$accent-1};
-	--swiper-pagination-bullet-inactive-color: #{$accent-1};
+	--swiper-theme-color: #{variables.$accent-1};
+	--swiper-pagination-bullet-inactive-color: #{variables.$accent-1};
 	--swiper-pagination-bullet-inactive-opacity: 0.3;
 	--swiper-pagination-top: 10px;
 	--swiper-pagination-bottom: auto;
@@ -40,6 +42,6 @@
 	border-radius: 20px;
 
 	&.swiper-slide-active {
-		box-shadow: $shadow-card;
+		box-shadow: variables.$shadow-card;
 	}
 }
