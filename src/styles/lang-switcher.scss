@@ -1,4 +1,4 @@
-@import "variables.scss";
+@use "variables.scss";
 
 .onoffswitch {
 	position: relative;
@@ -19,7 +19,7 @@
 	border-radius: 20px;
 	transition: all 0.3s ease-out;
 	&:hover {
-		border: 2px solid $accent-1;
+		border: 2px solid variables.$accent-1;
 	}
 }
 .onoffswitch-inner:before,
@@ -52,7 +52,7 @@
 	display: block;
 	width: 50px;
 	margin: 0px;
-	background: $background-dark-secondary;
+	background: variables.$background-dark-secondary;
 	position: absolute;
 	top: 2px;
 	bottom: 2px;
