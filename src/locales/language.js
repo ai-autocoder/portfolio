@@ -35,7 +35,6 @@ export function updateContent() {
 		"nav-about": "nav.about",
 		"nav-projects": "nav.projects",
 		"nav-contact": "nav.contact",
-		"banner-greeting": "banner.greeting",
 		"banner-name": "banner.name",
 		"banner-title": "banner.title",
 		"badge-tools": "banner.badges.tools",
