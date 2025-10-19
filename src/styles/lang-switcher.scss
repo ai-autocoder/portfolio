@@ -4,9 +4,7 @@
 	position: relative;
 	width: 100px;
 	margin: 7vh auto 10vh;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+	user-select: none;
 }
 .onoffswitch-checkbox {
 	display: none;
@@ -37,11 +35,11 @@
 .onoffswitch-inner:before {
 	content: "it";
 	margin-left: 0px;
-	color: #ffffff;
+	color: variables.$color-white;
 }
 .onoffswitch-inner:after {
 	content: "en";
-	color: #ffffff;
+	color: variables.$color-white;
 }
 #lang-switch + .onoffswitch-label .onoffswitch-inner {
 	display: block;

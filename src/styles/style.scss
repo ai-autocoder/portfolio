@@ -21,6 +21,17 @@
 	padding: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 body {
 	min-height: 0vw; //safari font size calc fix
 	min-width: 320px;
@@ -48,6 +59,10 @@ p {
 	font-size: 2.5rem;
 	color: white;
 	align-self: flex-end;
+	&:focus-visible {
+		outline: 2px solid variables.$accent-1;
+		outline-offset: 2px;
+	}
 }
 
 .nav {
@@ -80,6 +95,11 @@ p {
 		color: white;
 		padding: 1.5rem 3rem;
 		transition: all 0.3s;
+		&:focus-visible {
+			outline: 2px solid variables.$accent-1;
+			outline-offset: 2px;
+			background-color: rgba(255, 87, 34, 0.1);
+		}
 	}
 }
 
@@ -188,6 +208,10 @@ svg:hover {
 	&:active {
 		filter: brightness(0.6);
 	}
+	&:focus-visible {
+		outline: 2px solid currentColor;
+		outline-offset: 2px;
+	}
 }
 
 #open-menu-btn {
@@ -196,6 +220,10 @@ svg:hover {
 	top: 0;
 	right: 0;
 	font-size: 2.5rem;
+	&:focus-visible {
+		outline: 2px solid variables.$accent-1;
+		outline-offset: 2px;
+	}
 }
 
 .about {
@@ -208,7 +236,6 @@ svg:hover {
 	.about-text-card {
 		max-width: 60ch;
 		line-height: normal;
-		box-shadow: variables.$shadow-z2;
 		padding: 1rem;
 		background-color: variables.$background-dark-secondary;
 		border-radius: variables.$border-radius;
