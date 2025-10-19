@@ -51,7 +51,11 @@ h3 {
 }
 
 p {
-	line-height: 1.5;
+	line-height: 1.6;
+	letter-spacing: 0.01em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #close-menu-btn {
@@ -234,12 +238,24 @@ svg:hover {
 		flex-shrink: 0;
 	}
 	.about-text-card {
-		max-width: 60ch;
-		line-height: normal;
+		max-width: 65ch;
 		padding: 1rem;
 		background-color: variables.$background-dark-secondary;
 		border-radius: variables.$border-radius;
 		box-shadow: variables.$shadow-card;
+
+		p {
+			margin-bottom: 1em;
+			text-align: justify;
+			hyphens: auto;
+			text-justify: inter-word;
+			orphans: 3;
+			widows: 3;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 	.about-links {
 		margin-top: 2rem;
@@ -296,8 +312,8 @@ svg:hover {
 	}
 
 	.service-description {
-		line-height: 1.6;
 		color: variables.$color-dark;
+		max-width: 45ch;
 	}
 }
 
@@ -357,6 +373,9 @@ svg:hover {
 		margin-bottom: 3rem;
 		color: variables.$color-dark;
 		font-style: italic;
+		max-width: 50ch;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.stats-grid {
@@ -458,6 +477,12 @@ svg:hover {
 	}
 	.project-description {
 		padding: 1rem;
+		text-align: justify;
+		hyphens: auto;
+		text-justify: inter-word;
+		orphans: 3;
+		widows: 3;
+		max-width: 65ch;
 	}
 	.project-links {
 		margin-top: auto;
@@ -552,6 +577,8 @@ svg:hover {
 	.project-card {
 		.project-description {
 			padding: 1rem 2rem;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		.project-screenshot-container {
 			max-height: 250px;
