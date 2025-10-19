@@ -6,8 +6,13 @@
 	},
 	"banner": {
 		"greeting": "Welcome!",
-		"intro": "I`m",
-		"profession": ["Specialist in", "Full-Stack Web Development"]
+		"name": "Francesco Anzalone",
+		"title": "Full Stack Software Engineer",
+		"badges": {
+			"tools": "Creator of Developer Tools",
+			"ai": "AI-Enhanced Development",
+			"enterprise": "Enterprise Solutions"
+		}
 	},
 	"about": {
 		"title": "ABOUT ME",
