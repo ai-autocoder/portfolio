@@ -10,7 +10,7 @@
 		"title": "Ingegnere Software Full Stack",
 		"badges": {
 			"tools": "Sviluppatore di Tool per Developer",
-			"ai": "Sviluppo Assistito da AI",
+			"ai": "Sviluppo Potenziato da AI",
 			"enterprise": "Soluzioni Enterprise"
 		}
 	},
@@ -43,7 +43,7 @@
 				"description": "Creazione di estensioni VS Code e tool di automazione che migliorano l'efficienza del team e ottimizzano i workflow"
 			},
 			{
-				"title": "Sviluppo Assistito da AI",
+				"title": "Sviluppo Potenziato da AI",
 				"description": "Utilizzo di tool AI all'avanguardia (GitHub Copilot, Claude Code, Codex) per accelerare la delivery e migliorare la qualità del codice"
 			}
 		]
