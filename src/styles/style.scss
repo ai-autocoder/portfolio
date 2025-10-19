@@ -11,6 +11,7 @@
 	scroll-behavior: smooth;
 	font-family: variables.$main-font-family;
 	font-size: variables.$main-font-size;
+	--accent-1-rgb: 255, 87, 34;
 }
 
 *,
@@ -190,8 +191,60 @@ svg:hover {
 .title-container {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 }
 
+// Hero section styles
+.hero__name {
+	font-family: variables.$main-font-family;
+	font-size: clamp(2rem, 1rem + 5vw, 4rem);
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+
+.hero__title {
+	font-family: variables.$main-font-family;
+	font-size: clamp(1.25rem, 0.75rem + 2.5vw, 2rem);
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+	line-height: 1.4;
+	letter-spacing: -0.01em;
+	color: rgba(255, 255, 255, 0.9);
+	text-align: center;
+}
+
+.hero__badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: center;
+	margin-top: 1.5rem;
+	margin-bottom: 10vh;
+}
+
+.specialty-badge {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background: rgba(var(--accent-1-rgb), 0.1);
+	border: 1px solid rgba(var(--accent-1-rgb), 0.3);
+	border-radius: 24px;
+	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);
+	font-weight: 500;
+	color: variables.$accent-1;
+	transition: all 0.2s ease;
+	white-space: nowrap;
+
+	&:hover {
+		background: rgba(var(--accent-1-rgb), 0.15);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
+}
+
+// Legacy title class (kept for backwards compatibility if needed)
 .title {
 	margin-bottom: 10vh;
 	font-family: variables.$main-font-family;
@@ -525,9 +578,29 @@ svg:hover {
 		// 1.7rem@320px, 4rem@1800px
 		font-size: clamp(1.7rem, 1.2027rem + 2.4865vw, 4rem);
 	}
+
+	.specialty-badge {
+		padding: 0.6rem 1.2rem;
+		font-size: clamp(0.8rem, 0.7rem + 0.5vw, 1rem);
+	}
 }
 
 @media screen and (min-width: 768px) {
+	.hero__badges {
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.specialty-badge {
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+		}
+	}
+
 	#open-menu-btn,
 	#close-menu-btn {
 		display: none;
