@@ -98,8 +98,8 @@ function updateElementContent(id, key) {
 		} else {
 			const translation = i18next.t(key, { returnObjects: true });
 			if (Array.isArray(translation)) {
-				// Process multi line sections adding </br>
-				element.innerHTML = translation.map((line) => `${line}</br>`).join("");
+				// Process multi-line sections as separate paragraphs
+				element.innerHTML = translation.map((line) => `<p>${line}</p>`).join("");
 			} else {
 				// If it's a string, use it directly
 				element.innerHTML = translation;
