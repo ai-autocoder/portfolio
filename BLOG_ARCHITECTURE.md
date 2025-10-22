@@ -338,7 +338,7 @@ function escapeHtml(text) {
 </head>
 <body>
   <!-- Navigation (copy from main site) -->
-  <nav class="main-nav">
+  <nav class="nav" id="nav">
     <ul>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#skills">Skills</a></li>
@@ -418,7 +418,7 @@ function escapeHtml(text) {
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="main-nav">
+  <nav class="nav" id="nav">
     <ul>
       <li><a href="../index.html#about">About</a></li>
       <li><a href="../index.html#skills">Skills</a></li>
