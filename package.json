@@ -5,8 +5,11 @@
 	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"type": "module",
 	"scripts": {
+		"generate-blog": "node scripts/generate-blog.js",
+		"prestart": "npm run generate-blog",
 		"start": "parcel",
 		"start-chrome": "parcel --open chrome",
+		"prebuild": "npm run generate-blog",
 		"build": "parcel build",
 		"lint": "eslint src"
 	},
@@ -17,6 +20,10 @@
 		"@parcel/transformer-webmanifest": "^2.12.0",
 		"eslint": "^9.3.0",
 		"globals": "^15.3.0",
+		"gray-matter": "^4.0.3",
+		"handlebars": "^4.7.8",
+		"highlight.js": "^11.9.0",
+		"markdown-it": "^14.0.0",
 		"parcel": "latest",
 		"svgo": "^3.3.2"
 	},

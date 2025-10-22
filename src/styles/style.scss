@@ -3,6 +3,10 @@
 @use "lang-switcher.scss";
 @use "swiper.scss";
 
+// Blog styles
+@use "../blog/styles/article.scss";
+@use "../blog/styles/blog.scss";
+
 .no-break {
 	white-space: nowrap;
 }

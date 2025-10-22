@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blog | Francesco Anzalone</title>
+  <meta name="description" content="Technical articles and case studies on Full Stack Development, TypeScript, and modern web architectures by Francesco Anzalone.">
+  <meta name="keywords" content="web development, full stack, typescript, react, technical blog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog | Francesco Anzalone">
+  <meta property="og:description" content="Technical articles and case studies on Full Stack Development, TypeScript, and modern web architectures.">
+  <meta property="og:url" content="https://francescoanzalone.com/blog/">
+
+  <link rel="stylesheet" href="../styles/style.scss">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Blog Index -->
+  <main class="blog-index-container">
+    <header class="blog-header">
+      <h1>Technical Articles</h1>
+      <p>Case studies, deep dives, and lessons learned from building real-world applications.</p>
+    </header>
+
+    <div class="articles-list">
+      {{#each articles}}
+      <article class="article-preview">
+        {{#if this.image}}
+        <a href="{{this.slug}}.html" class="article-image">
+          <img src="{{this.image}}" alt="{{this.title}}" loading="lazy">
+        </a>
+        {{/if}}
+
+        <div class="article-info">
+          <h2><a href="{{this.slug}}.html">{{this.title}}</a></h2>
+
+          <div class="article-meta">
+            <time datetime="{{this.date}}">{{this.dateFormatted}}</time>
+            <span class="separator">•</span>
+            <span>{{this.readTime}} min read</span>
+          </div>
+
+          <p class="article-excerpt">{{this.excerpt}}</p>
+
+          <div class="article-tags">
+            {{#each this.tags}}
+            <span class="tag">{{this}}</span>
+            {{/each}}
+          </div>
+
+          <a href="{{this.slug}}.html" class="read-more">Read article →</a>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+
+    {{#unless articles}}
+    <div class="no-articles">
+      <p>No articles published yet. Check back soon!</p>
+    </div>
+    {{/unless}}
+  </main>
+</body>
+</html>
