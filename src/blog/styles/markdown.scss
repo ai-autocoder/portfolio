@@ -1,0 +1,164 @@
+// Markdown content typography styles
+// This file is imported into article.scss within .article-content
+
+h2, h3, h4, h5, h6 {
+  color: vars.$accent-1;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid rgba(vars.$accent-1, 0.3);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5em;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+a {
+  color: vars.$accent-1;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:visited {
+    color: vars.$accent-1;
+  }
+}
+
+strong {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+em {
+  font-style: italic;
+}
+
+ul, ol {
+  margin: 1.5em 0;
+  padding-left: 2em;
+
+  li {
+    margin: 0.75em 0;
+    line-height: 1.7;
+  }
+
+  ul, ol {
+    margin: 0.5em 0;
+  }
+}
+
+blockquote {
+  margin: 2em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid vars.$accent-1;
+  background: rgba(vars.$accent-1, 0.05);
+  font-style: italic;
+  border-radius: 4px;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: vars.$border-radius;
+  margin: 2em 0;
+  box-shadow: vars.$shadow-z2;
+}
+
+hr {
+  margin: 3em 0;
+  border: none;
+  border-top: 2px solid rgba(vars.$accent-1, 0.2);
+}
+
+// Code blocks
+pre {
+  background: #282c34;
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 2em 0;
+  box-shadow: vars.$shadow-z2;
+
+  code {
+    font-family: 'Fira Code', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #abb2bf;
+  }
+}
+
+// Inline code
+code {
+  font-family: 'Fira Code', 'Monaco', 'Courier New', monospace;
+  background: rgba(vars.$accent-1, 0.15);
+  color: vars.$accent-1;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+// Remove background from code inside pre
+pre code {
+  background: none;
+  color: #abb2bf;
+  padding: 0;
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  overflow-x: auto;
+  display: block;
+
+  th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(vars.$accent-1, 0.3);
+    text-align: left;
+  }
+
+  th {
+    background: rgba(vars.$accent-1, 0.1);
+    color: vars.$accent-1;
+    font-weight: 600;
+  }
+
+  tr:nth-child(even) td {
+    background: rgba(vars.$accent-1, 0.03);
+  }
+}
