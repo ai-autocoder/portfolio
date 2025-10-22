@@ -230,7 +230,7 @@ svg:hover {
 	padding: 0.5rem 1rem;
 	background: rgba(var(--accent-1-rgb), 0.1);
 	border: 1px solid rgba(var(--accent-1-rgb), 0.3);
-	border-radius: 24px;
+	border-radius: variables.$border-radius-button;
 	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);
 	font-weight: 500;
 	color: variables.$accent-1;
