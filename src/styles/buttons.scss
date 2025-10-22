@@ -9,7 +9,7 @@
 	text-decoration: none;
 	line-height: normal;
 	font-size: variables.$main-font-size;
-	transition: all 0.3s;
+	transition: all 0.3s ease;
 	min-height: 44px;
 	min-width: 44px;
 	&:focus-visible {
@@ -23,9 +23,11 @@
 	&:hover {
 		background-color: variables.$btn-secondary-hover-background;
 		filter: brightness(1.2);
+		transform: translateY(-2px);
 	}
 	&:active {
 		filter: brightness(0.6);
+		transform: translateY(0px);
 	}
 }
 
@@ -37,8 +39,10 @@
 	&:hover {
 		filter: brightness(1.6);
 		box-shadow: variables.$shadow-z8;
+		transform: translateY(-2px);
 	}
 	&:active {
 		filter: brightness(0.6);
+		transform: translateY(0px);
 	}
 }
