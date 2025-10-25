@@ -129,6 +129,12 @@ p {
 	transform: translateX(0%);
 }
 
+/* Blog pages navigation - horizontal layout */
+body:has(.blog-index-container, .article-container) .nav-links {
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
 .section {
 	display: flex;
 	flex-direction: column;
