@@ -1,4 +1,5 @@
 .vscode/*
+.claude/
 .parcel-cache/
 node_modules/
 images/
