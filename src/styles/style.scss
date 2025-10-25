@@ -92,7 +92,7 @@ p {
 		flex-direction: column;
 		list-style-type: none;
 		text-align: center;
-		:nth-child(1) {
+		.lang-switch-container {
 			order: 1;
 		}
 	}
@@ -104,10 +104,21 @@ p {
 		color: white;
 		padding: 1.5rem 3rem;
 		transition: all 0.3s;
+		&:hover {
+			color: variables.$accent-1;
+		}
+		&:active {
+			filter: brightness(0.6);
+		}
 		&:focus-visible {
 			outline: 2px solid variables.$accent-1;
 			outline-offset: 2px;
 			background-color: rgba(255, 87, 34, 0.1);
+		}
+		&.active {
+			color: variables.$accent-1;
+			font-weight: 500;
+			cursor: pointer;
 		}
 	}
 }
@@ -626,7 +637,7 @@ svg:hover {
 			gap: min(2vw, 1rem);
 			align-items: start;
 
-			:nth-child(1) {
+			.lang-switch-container {
 				order: -1;
 				margin: auto;
 				margin-left: 0;
