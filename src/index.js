@@ -12,11 +12,16 @@ initializeI18next().then(() => {
 
 // Nav open / close
 const navElem = document.getElementById("nav");
-document.getElementById("open-menu-btn").addEventListener("click", () => {
-	navElem.classList.add("show-menu");
-});
-document.getElementById("close-menu-btn").addEventListener("click", () => {
-	navElem.classList.remove("show-menu");
-});
+const openMenuBtn = document.getElementById("open-menu-btn");
+const closeMenuBtn = document.getElementById("close-menu-btn");
+
+if (openMenuBtn && closeMenuBtn && navElem) {
+	openMenuBtn.addEventListener("click", () => {
+		navElem.classList.add("show-menu");
+	});
+	closeMenuBtn.addEventListener("click", () => {
+		navElem.classList.remove("show-menu");
+	});
+}
 
 initializeSwiper();
