@@ -103,12 +103,14 @@ p {
 		font-size: 1.2rem;
 		color: white;
 		padding: 1.5rem 3rem;
-		transition: all 0.3s;
+		transition: color 0.3s ease;
 		&:hover {
 			color: variables.$accent-1;
 		}
 		&:active {
-			filter: brightness(0.6);
+			color: variables.$accent-1;
+			opacity: 0.6;
+			transition: none;
 		}
 		&:focus-visible {
 			outline: 2px solid variables.$accent-1;
@@ -249,7 +251,7 @@ svg:hover {
 	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);
 	font-weight: 500;
 	color: variables.$accent-1;
-	transition: all 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 	white-space: nowrap;
 
 	&:hover {
@@ -420,7 +422,7 @@ svg:hover {
 			border: 1px solid variables.$accent-1;
 			border-radius: variables.$border-radius-full;
 			font-size: 0.9em;
-			transition: all 0.3s ease;
+			transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 
 			&:hover {
 				background-color: variables.$accent-1;

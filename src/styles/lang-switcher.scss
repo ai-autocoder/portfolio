@@ -23,7 +23,6 @@
 	cursor: pointer;
 	border: 2px solid hsla(0, 0%, 0%, 0);
 	border-radius: 20px;
-	transition: all 0.3s ease-out;
 }
 .onoffswitch-label:hover,
 .onoffswitch-checkbox:focus + .onoffswitch-label {
@@ -64,12 +63,13 @@
 	position: absolute;
 	top: 2px;
 	bottom: 2px;
-	right: 48px;
+	left: 2px;
 	border-radius: 20px;
-	transition: all 0.3s ease-out;
+	transform: translateX(0);
+	transition: transform 0.3s ease-out;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-	right: 2px;
+	transform: translateX(46px);
 }
 @media screen and (min-width: 768px) {
 	.onoffswitch {
