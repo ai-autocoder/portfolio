@@ -1,4 +1,5 @@
 @use "variables";
+@use "sass:color";
 
 .button-primary,
 .button-secondary {
@@ -9,7 +10,7 @@
 	text-decoration: none;
 	line-height: normal;
 	font-size: variables.$main-font-size;
-	transition: all 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 	min-height: 44px;
 	min-width: 44px;
 	&:focus-visible {
@@ -22,12 +23,12 @@
 	color: variables.$accent-1;
 	&:hover {
 		background-color: variables.$btn-secondary-hover-background;
-		filter: brightness(1.2);
 		transform: translateY(-2px);
 	}
 	&:active {
-		filter: brightness(0.6);
+		background-color: rgba(255, 116, 33, 0.3);
 		transform: translateY(0px);
+		transition: none;
 	}
 }
 
@@ -37,12 +38,13 @@
 	background-color: variables.$accent-1;
 	box-shadow: variables.$shadow-z2;
 	&:hover {
-		filter: brightness(1.6);
+		background-color: color.adjust(variables.$accent-1, $lightness: 12%);
 		box-shadow: variables.$shadow-z8;
 		transform: translateY(-2px);
 	}
 	&:active {
-		filter: brightness(0.6);
+		background-color: color.adjust(variables.$accent-1, $lightness: -8%);
 		transform: translateY(0px);
+		transition: none;
 	}
 }
