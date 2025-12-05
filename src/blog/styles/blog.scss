@@ -46,6 +46,17 @@
       font-size: 1rem;
     }
   }
+
+  .article-count {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.4rem 1rem;
+    background: rgba(vars.$accent-1, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(vars.$accent-1, 0.2);
+  }
 }
 
 .articles-list {
@@ -62,9 +73,86 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
+
+  // Featured article - first article spans full width on tablet+
+  .article-preview:first-child {
+    @media (min-width: 768px) {
+      grid-column: 1 / -1;
+
+      .article-info {
+        padding: 2.5rem;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2 a {
+          font-size: 1.75rem;
+          line-height: 1.25;
+        }
+
+        .article-excerpt {
+          font-size: 1.05rem;
+          -webkit-line-clamp: 4;
+          line-clamp: 4;
+        }
+
+        .article-meta {
+          justify-content: center;
+          font-size: 0.9rem;
+        }
+
+        .article-tags {
+          justify-content: center;
+        }
+
+        .read-more {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .article-info {
+        padding: 3rem;
+
+        h2 a {
+          font-size: 2rem;
+        }
+
+        .article-excerpt {
+          font-size: 1.1rem;
+          -webkit-line-clamp: 5;
+          line-clamp: 5;
+        }
+      }
+    }
+
+    // Featured badge
+    &::before {
+      content: 'Latest';
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: vars.$accent-1;
+      color: vars.$background-dark;
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      z-index: 2;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
 }
 
 .article-preview {
+  position: relative;
   background: vars.$background-dark-secondary;
   border-radius: vars.$border-radius;
   overflow: hidden;
@@ -209,13 +297,19 @@
       margin-bottom: 1rem;
 
       .tag {
-        background: rgba(vars.$accent-1, 0.15);
+        background: rgba(vars.$accent-1, 0.12);
         color: vars.$accent-1;
         padding: 0.3rem 0.75rem;
         border-radius: 20px;
         font-size: 0.8rem;
-        border: 1px solid rgba(vars.$accent-1, 0.3);
+        border: 1px solid rgba(vars.$accent-1, 0.25);
         white-space: nowrap;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+          background: rgba(vars.$accent-1, 0.2);
+          border-color: rgba(vars.$accent-1, 0.4);
+        }
 
         @media (min-width: 768px) {
           font-size: 0.75rem;
@@ -225,17 +319,26 @@
     }
 
     .read-more {
+      display: inline-block;
       color: vars.$accent-1;
       text-decoration: none;
       font-weight: 500;
       font-size: 0.95rem;
-      transition: opacity 0.2s ease;
-      display: inline-block;
-      margin-top: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: vars.$border-radius-button;
+      margin-top: 0.75rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      background: transparent;
 
       &:hover {
-        opacity: 0.8;
-        text-decoration: underline;
+        background-color: rgba(255, 116, 33, 0.2);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        background-color: rgba(255, 116, 33, 0.3);
+        transform: translateY(0);
+        transition: none;
       }
 
       @media (min-width: 768px) {
@@ -255,5 +358,32 @@
   p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.1rem;
+  }
+}
+
+// Entrance animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-header {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.article-preview {
+  animation: fadeInUp 0.5s ease-out backwards;
+
+  // Staggered animation for each card
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{0.1 + ($i * 0.05)}s;
+    }
   }
 }
