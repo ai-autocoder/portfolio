@@ -1,5 +1,10 @@
 .vscode/*
+.claude/
 .parcel-cache/
 node_modules/
 images/
 dist/
+
+# Blog generated files
+src/blog/*.html
+src/blog/index.html
