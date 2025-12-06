@@ -1,7 +1,7 @@
 ---
 title: "FastAPI vs Express.js: A Full Stack Developer's Comparison"
 date: "2024-09-20"
-excerpt: "I built the same API twice (once in FastAPI, once in Express.js). Here's what I learned about performance, developer experience, and when to choose each framework for real projects."
+excerpt: "I built the same API twice (once in FastAPI, once in Express.js). Here's what I learned about performance, DX, and when to choose each framework for real projects."
 tags: [fastapi, express, nodejs, python, backend, api]
 readTime: 15
 ---

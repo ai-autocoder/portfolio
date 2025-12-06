@@ -1,7 +1,7 @@
 ---
 title: "System Design in Practice: Architecture Decisions That Scaled"
 date: "2025-09-08"
-excerpt: "How I architected a web platform to handle thousands of users per month. The trade-offs, mistakes, and decisions that made the difference between 'works in demo' and 'works in production.'"
+excerpt: "How I architected a platform to handle thousands of users monthly. The trade-offs and decisions that made the difference between 'demo' and 'production.'"
 tags: [system-design, architecture, scalability, backend, full-stack]
 readTime: 18
 ---

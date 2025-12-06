@@ -1,12 +1,12 @@
 ---
-title: "Accessibility Isn't Optional: What I Learned After a User Couldn't Use My App"
+title: "Accessibility Isn't Optional: What a Screen Reader User Taught Me"
 date: "2024-07-15"
-excerpt: "A screen reader user emailed me saying my web app was unusable. That email changed how I build every project. Here's what I learned about making web apps accessible."
+excerpt: "A screen reader user emailed saying my web app was unusable. That email changed how I build every project. Here's what I learned about web accessibility."
 tags: [accessibility, a11y, frontend, ux, web-development]
 readTime: 14
 ---
 
-# Accessibility Isn't Optional: What I Learned After a User Couldn't Use My App
+# Accessibility Isn't Optional: What a Screen Reader User Taught Me
 
 I got an email that made me feel terrible.
 

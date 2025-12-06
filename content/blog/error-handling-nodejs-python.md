@@ -1,7 +1,7 @@
 ---
 title: "Error Handling Best Practices in Node.js and Python"
 date: "2025-05-20"
-excerpt: "A production bug at 2 AM taught me that 'it works on my machine' isn't enough. Here's how I went from 'console.log(error)' to actually handling errors properly in both Node.js and Python."
+excerpt: "A 2 AM production bug taught me 'it works on my machine' isn't enough. Here's how I went from console.log(error) to proper error handling in both languages."
 tags: [nodejs, python, error-handling, debugging, backend]
 readTime: 16
 ---

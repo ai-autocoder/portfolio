@@ -1,7 +1,7 @@
 ---
 title: "Docker for JavaScript Developers: A Practical Introduction"
 date: "2025-06-10"
-excerpt: "'Works on my machine' stopped being acceptable when we started deploying to production. Here's how Docker saved me from environment hell and made deployments actually predictable."
+excerpt: "'Works on my machine' stopped being acceptable when deploying to production. Docker saved me from environment hell and made our deployments predictable."
 tags: [docker, nodejs, deployment, devops, containers]
 readTime: 16
 ---
