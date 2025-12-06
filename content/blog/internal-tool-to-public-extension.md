@@ -1,7 +1,7 @@
 ---
 title: "From Internal Tool to Public Extension: Multi-Projects Diff"
 date: "2025-03-10"
-excerpt: "How a weekend project to solve a personal workflow problem became a published VS Code extension on two marketplaces, and the engineering lessons learned from shipping a production developer tool."
+excerpt: "How a weekend project solving my workflow problem became a VS Code extension on two marketplaces, and the lessons learned from shipping a production tool."
 tags: [vscode, extension, typescript, open-source, developer-tools]
 readTime: 13
 ---

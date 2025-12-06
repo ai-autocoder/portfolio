@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL for Full Stack Developers: Beyond Basic CRUD"
 date: "2025-04-15"
-excerpt: "Moving beyond INSERT, UPDATE, DELETE taught me that PostgreSQL is more than just a database. It's a powerful tool for solving real business problems. Here's what changed when I stopped treating it like a dumb data store."
+excerpt: "PostgreSQL is more than just INSERT, UPDATE, DELETE. Here's what changed when I stopped treating it like a dumb data store and unlocked its real power."
 tags: [postgresql, database, sql, backend, performance]
 readTime: 14
 ---

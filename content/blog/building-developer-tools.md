@@ -1,7 +1,7 @@
 ---
 title: "Building Developer Tools That Your Team Will Actually Use"
 date: "2025-02-15"
-excerpt: "I've built four internal tools. Three gathered dust. One is used daily by 15 developers. Here's what made the difference between 'nice idea' and 'can't work without it.'"
+excerpt: "I've built four internal tools. Three gathered dust, one is used daily by 15 devs. Here's what made the difference between 'nice idea' and 'essential.'"
 tags: [developer-tools, productivity, vscode, automation, team]
 readTime: 15
 ---
