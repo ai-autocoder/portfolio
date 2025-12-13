@@ -1,19 +1,144 @@
-$main-font-family: "Roboto", sans-serif;
-$main-font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.3571)), 20px);
-$accent-1: #ff5722;
-$btn-secondary-hover-background: rgba(255, 116, 33, 0.2);
-$background-dark: hsl(0, 0%, 0%);
-$background-dark-secondary: hsl(0, 0%, 15%);
-$border-radius: 20px;
-$border-radius-full: 9999px;
-$border-radius-button: 40px;
-$color-dark: hsl(0, 0%, 85%);
-$color-white: #ffffff;
-$color-black: #000000;
-$shadow-z2: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-	0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-$shadow-z8: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
-	0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-$shadow-z16: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px,
-	rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
-$shadow-card: hsla(198, 84%, 20%, 0.6) 0px 0px 100px 0px;
+// =============================================================================
+// Design System Variables - Technical Editorial Theme
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+$font-display: 'Canela', Georgia, serif;
+$font-body: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono: 'Sohne Mono', 'JetBrains Mono', 'Fira Code', monospace;
+
+// Font sizes (fluid typography)
+$text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+$text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+$text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+$text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+$text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+$text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+$text-3xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+$text-4xl: clamp(2.5rem, 2rem + 3vw, 4rem);
+$text-5xl: clamp(3rem, 2.5rem + 3.5vw, 5rem);
+
+// Base font size
+$main-font-size: $text-base;
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+// Backgrounds
+$background-deep: #0F172A;
+$background-card: #1E293B;
+$background-elevated: #334155;
+
+// Accent colors
+$accent-primary: #0EA5E9;
+$accent-secondary: #14B8A6;
+$accent-muted: rgba(14, 165, 233, 0.12);
+$accent-glow: rgba(14, 165, 233, 0.25);
+
+// Text colors
+$text-primary: #F8FAFC;
+$text-secondary: #CBD5E1;
+$text-tertiary: #64748B;
+
+// Border colors
+$border-subtle: rgba(148, 163, 184, 0.1);
+$border-default: rgba(148, 163, 184, 0.15);
+$border-accent: rgba(14, 165, 233, 0.3);
+$border-accent-strong: rgba(14, 165, 233, 0.5);
+
+// Legacy color mappings (for backwards compatibility during transition)
+$accent-1: $accent-primary;
+$background-dark: $background-deep;
+$background-dark-secondary: $background-card;
+$color-dark: $text-secondary;
+$color-white: $text-primary;
+$color-black: $background-deep;
+
+// CSS custom property for RGB values (used in rgba())
+$accent-primary-rgb: 14, 165, 233;
+
+// Button specific
+$btn-secondary-hover-background: rgba(14, 165, 233, 0.15);
+
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.25rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-20: 5rem;
+$space-24: 6rem;
+
+// -----------------------------------------------------------------------------
+// Border Radius
+// -----------------------------------------------------------------------------
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 9999px;
+
+// Legacy mappings
+$border-radius: $radius-lg;
+$border-radius-full: $radius-full;
+$border-radius-button: 8px;
+
+// -----------------------------------------------------------------------------
+// Shadows
+// -----------------------------------------------------------------------------
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+$shadow-glow: 0 0 40px rgba(14, 165, 233, 0.15);
+$shadow-glow-strong: 0 0 60px rgba(14, 165, 233, 0.25);
+
+// Legacy shadow mappings
+$shadow-z2: $shadow-sm;
+$shadow-z8: $shadow-md;
+$shadow-z16: $shadow-lg;
+$shadow-card: $shadow-glow;
+
+// -----------------------------------------------------------------------------
+// Transitions
+// -----------------------------------------------------------------------------
+$transition-fast: 150ms ease-out;
+$transition-base: 200ms ease-out;
+$transition-slow: 300ms ease-out;
+$transition-slower: 400ms ease-out;
+
+// -----------------------------------------------------------------------------
+// Breakpoints
+// -----------------------------------------------------------------------------
+$breakpoint-sm: 425px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// -----------------------------------------------------------------------------
+// Z-Index Scale
+// -----------------------------------------------------------------------------
+$z-dropdown: 10;
+$z-sticky: 20;
+$z-fixed: 30;
+$z-modal-backdrop: 40;
+$z-modal: 50;
+$z-popover: 60;
+$z-tooltip: 70;
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+$container-max-width: 1400px;
+$content-max-width: 65ch;

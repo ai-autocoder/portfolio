@@ -4,6 +4,8 @@
 node_modules/
 images/
 dist/
+/fonts
+/screenshots
 
 # Blog generated files
 src/blog/*.html
