@@ -1,50 +1,180 @@
-@use "variables";
-@use "sass:color";
+// =============================================================================
+// Button Styles - Technical Editorial Theme
+// =============================================================================
 
+@use "sass:color";
+@use "variables" as *;
+
+// Base button styles
 .button-primary,
 .button-secondary {
-	font-family: variables.$main-font-family;
-	display: block;
-	padding: 0.8em 2em;
-	border-radius: variables.$border-radius-button;
+	font-family: $font-body;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: $space-2;
+	padding: $space-3 $space-6;
+	border-radius: $border-radius-button;
 	text-decoration: none;
-	line-height: normal;
-	font-size: variables.$main-font-size;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+	line-height: 1.4;
+	font-size: $text-sm;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	cursor: pointer;
+	transition: transform $transition-base, box-shadow $transition-base,
+		background-color $transition-base, border-color $transition-base,
+		color $transition-base;
 	min-height: 44px;
 	min-width: 44px;
+	border: 1px solid transparent;
+
 	&:focus-visible {
-		outline: 3px solid variables.$accent-1;
-		outline-offset: 3px;
+		outline: 2px solid $accent-primary;
+		outline-offset: 2px;
+	}
+
+	// Subtle arrow indicator for external links
+	&[target="_blank"]::after,
+	&[href^="http"]::after {
+		content: '';
+		display: inline-block;
+		width: 0.75em;
+		height: 0.75em;
+		margin-left: $space-1;
+		background-color: currentColor;
+		mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+		mask-size: contain;
+		mask-repeat: no-repeat;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+		-webkit-mask-size: contain;
+		-webkit-mask-repeat: no-repeat;
+		opacity: 0.7;
+		transition: transform $transition-fast, opacity $transition-fast;
+	}
+
+	&:hover::after {
+		transform: translate(2px, -2px);
+		opacity: 1;
 	}
 }
 
-.button-secondary {
-	color: variables.$accent-1;
-	&:hover {
-		background-color: variables.$btn-secondary-hover-background;
-		transform: translateY(-2px);
-	}
-	&:active {
-		background-color: rgba(255, 116, 33, 0.3);
-		transform: translateY(0px);
-		transition: none;
-	}
-}
-
+// Primary button - filled style
 .button-primary {
-	color: white;
-	border: none;
-	background-color: variables.$accent-1;
-	box-shadow: variables.$shadow-z2;
+	color: $background-deep;
+	background-color: $accent-primary;
+	border-color: $accent-primary;
+	box-shadow: $shadow-sm;
+
 	&:hover {
-		background-color: color.adjust(variables.$accent-1, $lightness: 12%);
-		box-shadow: variables.$shadow-z8;
+		background-color: color.adjust($accent-primary, $lightness: 8%);
+		border-color: color.adjust($accent-primary, $lightness: 8%);
+		box-shadow: $shadow-md, 0 0 20px rgba($accent-primary, 0.3);
 		transform: translateY(-2px);
 	}
+
 	&:active {
-		background-color: color.adjust(variables.$accent-1, $lightness: -8%);
-		transform: translateY(0px);
+		background-color: color.adjust($accent-primary, $lightness: -5%);
+		border-color: color.adjust($accent-primary, $lightness: -5%);
+		transform: translateY(0);
+		box-shadow: $shadow-sm;
 		transition: none;
 	}
+}
+
+// Secondary button - outline/ghost style
+.button-secondary {
+	color: $accent-primary;
+	background-color: transparent;
+	border-color: $border-accent;
+
+	&:hover {
+		background-color: $accent-muted;
+		border-color: $border-accent-strong;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba($accent-primary, 0.1);
+	}
+
+	&:active {
+		background-color: rgba($accent-primary, 0.2);
+		transform: translateY(0);
+		transition: none;
+	}
+}
+
+// Text button variant (for less prominent actions)
+.button-text {
+	font-family: $font-body;
+	display: inline-flex;
+	align-items: center;
+	gap: $space-2;
+	padding: $space-2 $space-3;
+	color: $accent-primary;
+	background: transparent;
+	border: none;
+	border-radius: $radius-sm;
+	font-size: $text-sm;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color $transition-base, background-color $transition-base;
+
+	&:hover {
+		background-color: $accent-muted;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $accent-primary;
+		outline-offset: 2px;
+	}
+}
+
+// Icon button (for icon-only buttons)
+.button-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	color: $text-secondary;
+	background: transparent;
+	border: 1px solid $border-subtle;
+	border-radius: $radius-md;
+	cursor: pointer;
+	transition: color $transition-base, background-color $transition-base,
+		border-color $transition-base;
+
+	svg {
+		width: 1.25em;
+		height: 1.25em;
+		fill: currentColor;
+	}
+
+	&:hover {
+		color: $accent-primary;
+		background-color: $accent-muted;
+		border-color: $border-accent;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $accent-primary;
+		outline-offset: 2px;
+	}
+}
+
+// Small button variant
+.button-sm {
+	padding: $space-2 $space-4;
+	font-size: $text-xs;
+	min-height: 36px;
+}
+
+// Large button variant
+.button-lg {
+	padding: $space-4 $space-8;
+	font-size: $text-base;
+	min-height: 52px;
 }

@@ -1,13 +1,25 @@
-@use "variables";
+// =============================================================================
+// Swiper Carousel Styles - Technical Editorial Theme
+// =============================================================================
+
+@use "variables" as *;
 
 :root {
-	--swiper-theme-color: #{variables.$accent-1};
-	--swiper-pagination-bullet-inactive-color: #{variables.$accent-1};
+	--swiper-theme-color: #{$accent-primary};
+	--swiper-pagination-bullet-inactive-color: #{$accent-primary};
 	--swiper-pagination-bullet-inactive-opacity: 0.3;
 	--swiper-pagination-top: 10px;
 	--swiper-pagination-bottom: auto;
-	--swiper-navigation-sides-offset: 1rem;
-	--swiper-navigation-top-offset: 44%;
+	--swiper-navigation-sides-offset: 0.5rem;
+	--swiper-navigation-top-offset: 58%;
+}
+
+.swiper-pagination-bullet {
+	transition: transform $transition-base, opacity $transition-base;
+
+	&:hover {
+		transform: scale(1.2);
+	}
 }
 
 .swiper-pagination-bullet-active {
@@ -15,9 +27,42 @@
 	--swiper-pagination-bullet-height: 10px;
 }
 
-@media screen and (min-width: 768px) {
+// Navigation arrows - positioned in the description area
+.swiper-button-prev,
+.swiper-button-next {
+	width: 40px;
+	height: 40px;
+	background-color: rgba($background-card, 0.95);
+	border: 1px solid $border-accent;
+	border-radius: $radius-md;
+	transition: background-color $transition-base, border-color $transition-base,
+		transform $transition-base, box-shadow $transition-base;
+	box-shadow: $shadow-md;
+
+	&::after {
+		font-size: 0.875rem;
+		font-weight: bold;
+		color: $accent-primary;
+	}
+
+	&:hover {
+		background-color: $background-elevated;
+		border-color: $accent-primary;
+		transform: scale(1.08);
+		box-shadow: $shadow-glow;
+	}
+}
+
+@media screen and (min-width: $breakpoint-md) {
 	:root {
-		--swiper-navigation-top-offset: 50%;
+		--swiper-navigation-top-offset: 55%;
+		--swiper-navigation-sides-offset: -1.5rem;
+	}
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+	:root {
+		--swiper-navigation-sides-offset: -3rem;
 	}
 }
 
@@ -28,7 +73,7 @@
 	width: 100%;
 	height: auto;
 	max-width: 60ch;
-	padding: 2.5rem 0;
+	padding: $space-10 0;
 }
 
 .swiper-slide {
@@ -39,9 +84,15 @@
 	height: 100%;
 	position: relative;
 	box-sizing: border-box;
-	border-radius: 20px;
+	border-radius: $radius-lg;
+	transition: box-shadow $transition-slow, transform $transition-slow;
 
 	&.swiper-slide-active {
-		box-shadow: variables.$shadow-card;
+		box-shadow: $shadow-glow-strong;
+	}
+
+	// Inactive slides
+	&:not(.swiper-slide-active) {
+		opacity: 0.6;
 	}
 }
