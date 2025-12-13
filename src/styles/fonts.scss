@@ -1,0 +1,54 @@
+// =============================================================================
+// Font Face Declarations
+// =============================================================================
+
+// Canela - Display/Headlines
+@font-face {
+	font-family: 'Canela';
+	src: url('../fonts/canela-regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela';
+	src: url('../fonts/canela-medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Söhne - Body Text
+@font-face {
+	font-family: 'Sohne';
+	src: url('../fonts/sohne-buch.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sohne';
+	src: url('../fonts/sohne-kraftig.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sohne';
+	src: url('../fonts/sohne-halbfett.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Söhne Mono - Code
+@font-face {
+	font-family: 'Sohne Mono';
+	src: url('../fonts/sohne-mono-buch.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
