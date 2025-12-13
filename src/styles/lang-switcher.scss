@@ -1,4 +1,8 @@
-@use "variables.scss";
+// =============================================================================
+// Language Switcher Styles - Technical Editorial Theme
+// =============================================================================
+
+@use "variables" as *;
 
 .onoffswitch {
 	position: relative;
@@ -6,6 +10,7 @@
 	margin: 7vh auto 10vh;
 	user-select: none;
 }
+
 .onoffswitch-checkbox {
 	position: absolute;
 	width: 1px;
@@ -17,18 +22,23 @@
 	white-space: nowrap;
 	border-width: 0;
 }
+
 .onoffswitch-label {
 	display: block;
 	overflow: hidden;
 	cursor: pointer;
-	border: 2px solid hsla(0, 0%, 0%, 0);
-	border-radius: 20px;
+	border: 1px solid $border-subtle;
+	border-radius: $radius-full;
+	background-color: rgba($background-card, 0.5);
+	transition: border-color $transition-base, box-shadow $transition-base;
 }
+
 .onoffswitch-label:hover,
 .onoffswitch-checkbox:focus + .onoffswitch-label {
-	outline: 2px solid variables.$accent-1;
-	outline-offset: 2px;
+	border-color: $border-accent;
+	box-shadow: 0 0 0 2px $accent-muted;
 }
+
 .onoffswitch-inner:before,
 .onoffswitch-inner:after {
 	display: block;
@@ -37,41 +47,62 @@
 	height: 30px;
 	padding: 0;
 	line-height: 30px;
-	font-size: 18px;
-	font-weight: bold;
+	font-family: $font-body;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 	box-sizing: border-box;
 }
+
 .onoffswitch-inner:before {
 	content: "it";
 	margin-left: 0px;
-	color: variables.$color-white;
+	color: $text-tertiary;
+	transition: color $transition-base;
 }
+
 .onoffswitch-inner:after {
 	content: "en";
-	color: variables.$color-white;
+	color: $text-tertiary;
+	transition: color $transition-base;
 }
+
+// Active language indicator
+.onoffswitch-checkbox:not(:checked) + .onoffswitch-label .onoffswitch-inner:after {
+	color: $accent-primary;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner:before {
+	color: $accent-primary;
+}
+
 #lang-switch + .onoffswitch-label .onoffswitch-inner {
 	display: block;
 	width: 100%;
 	margin-left: 0;
 }
+
 .onoffswitch-switch {
 	display: block;
 	width: 50px;
 	margin: 0px;
-	background: variables.$background-dark-secondary;
+	background: $accent-primary;
 	position: absolute;
 	top: 2px;
 	bottom: 2px;
 	left: 2px;
-	border-radius: 20px;
+	border-radius: $radius-full;
 	transform: translateX(0);
-	transition: transform 0.3s ease-out;
+	transition: transform $transition-slow;
+	box-shadow: $shadow-sm;
 }
+
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
 	transform: translateX(46px);
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: $breakpoint-md) {
 	.onoffswitch {
 		margin: 0;
 	}
