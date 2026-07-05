@@ -96,3 +96,44 @@
 		opacity: 0.6;
 	}
 }
+
+// =============================================================================
+// Projects Grid Mode (desktop)
+// =============================================================================
+// On viewports >= 992px, swiper.ts destroys the carousel and adds
+// .projects-grid-mode so all project cards are scannable at a glance.
+
+@media screen and (min-width: $breakpoint-lg) {
+	.swiper.projects-grid-mode {
+		max-width: min($container-max-width, 90vw);
+		padding: $space-4 0 0;
+
+		.swiper-wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: $space-8;
+			transform: none !important;
+		}
+
+		.swiper-slide {
+			width: auto !important;
+			align-items: stretch;
+			opacity: 1;
+			transform: none !important;
+
+			&.swiper-slide-active {
+				box-shadow: none;
+			}
+		}
+
+		.project-card {
+			width: 100%;
+		}
+
+		.swiper-pagination,
+		.swiper-button-prev,
+		.swiper-button-next {
+			display: none;
+		}
+	}
+}

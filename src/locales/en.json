@@ -2,19 +2,20 @@
 	"nav": {
 		"about": "About",
 		"projects": "Projects",
-		"contact": "Contact"
+		"contact": "Contact",
+		"blog": "Blog"
 	},
 	"banner": {
 		"name": "Francesco Anzalone",
 		"title": "Full Stack Software Engineer",
 		"badges": {
-			"tools": "Open Source Tools",
+			"tools": "Creator of Developer Tools",
 			"ai": "AI-Enhanced Development",
 			"enterprise": "Enterprise Solutions"
 		}
 	},
 	"about": {
-		"title": "ABOUT ME",
+		"title": "About me",
 		"text": [
 			"I build web applications that solve real business problems.",
 			"As a Full Stack Developer, I've re-engineered legacy B2B platforms serving major European enterprises, created automated recruitment systems processing thousands of applications, and developed productivity tools used by developers worldwide.",
@@ -24,10 +25,10 @@
 		]
 	},
 	"projects": {
-		"header": "SIDE PROJECTS"
+		"header": "Side projects"
 	},
 	"services": {
-		"title": "SERVICES & EXPERTISE",
+		"title": "Services & expertise",
 		"items": [
 			{
 				"title": "Full-Stack Development",
@@ -48,7 +49,7 @@
 		]
 	},
 	"techStack": {
-		"title": "TECH STACK",
+		"title": "Tech stack",
 		"categories": {
 			"frontend": {
 				"title": "Frontend",
@@ -69,7 +70,7 @@
 		}
 	},
 	"extensions": {
-		"title": "PUBLISHED VS CODE EXTENSIONS",
+		"title": "Published VS Code extensions",
 		"subtitle": "Developer productivity tools used by thousands worldwide",
 		"stats": {
 			"downloads": "Total Downloads",
@@ -80,9 +81,10 @@
 		"cta": "View on Marketplace"
 	},
 	"contact": {
-		"title": "CONTACT ME",
+		"title": "Contact me",
 		"form": {
 			"name": "Your Name",
+			"email": "Email",
 			"message": "Message",
 			"send": "Send"
 		}
