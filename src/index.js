@@ -29,7 +29,7 @@ initializeSwiper();
 // Scroll-triggered entrance animations
 const initScrollAnimations = () => {
 	const animatedElements = document.querySelectorAll(
-		".about-text-card, .about-links, .service-card, .tech-category, .extension-card, .footer-title, .contact form"
+		".about-text-card, .about-links, .service-card, .tech-category, .stat-card, .footer-title, .contact form"
 	);
 
 	if (!animatedElements.length) return;
