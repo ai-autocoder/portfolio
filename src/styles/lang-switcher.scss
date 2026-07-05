@@ -68,19 +68,26 @@
 	transition: color $transition-base;
 }
 
-// Active language indicator
-.onoffswitch-checkbox:not(:checked) + .onoffswitch-label .onoffswitch-inner:after {
-	color: $accent-primary;
+// Segmented-control semantics: the accent knob slides under the ACTIVE
+// language, whose code renders on top of it in dark text; the inactive
+// language stays muted beside it.
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner:after {
+	color: $background-deep;
+	font-weight: 600;
 }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner:before {
-	color: $accent-primary;
+.onoffswitch-checkbox:not(:checked) + .onoffswitch-label .onoffswitch-inner:before {
+	color: $background-deep;
+	font-weight: 600;
 }
 
 #lang-switch + .onoffswitch-label .onoffswitch-inner {
 	display: block;
 	width: 100%;
 	margin-left: 0;
+	// Paint the labels above the knob so the active one is readable on it
+	position: relative;
+	z-index: 1;
 }
 
 .onoffswitch-switch {
