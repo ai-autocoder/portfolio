@@ -6,14 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Francesco Anzalone - Full Stack Software Engineer</title>
 		<meta name="description" content="Full Stack Software Engineer specializing in React, Node.js, and TypeScript. Creator of developer tools and AI-enhanced development solutions for enterprise applications." />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
+		<!-- Open Graph / Twitter -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Francesco Anzalone - Full Stack Software Engineer" />
+		<meta property="og:description" content="Full Stack Software Engineer specializing in React, Node.js, and TypeScript. Creator of developer tools and AI-enhanced development solutions for enterprise applications." />
+		<meta property="og:url" content="https://francescoanzalone.com/" />
+		<meta property="og:image" content="./media/img/og-default.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Francesco Anzalone - Full Stack Software Engineer" />
+		<meta name="twitter:image" content="./media/img/og-default.jpg" />
 		<link rel="stylesheet" href="./styles/style.scss" />
 		<!-- Custom fonts preload -->
-		<link rel="preload" href="./fonts/canela-medium.otf" as="font" type="font/otf" crossorigin />
-		<link rel="preload" href="./fonts/sohne-buch.otf" as="font" type="font/otf" crossorigin />
+		<link rel="preload" href="./fonts/fraunces-500.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="./fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
 		<!-- favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -23,7 +28,7 @@
 		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b76f9dab46e24259914b250c68aa1724"}'></script>
 		 <!-- End Cloudflare Web Analytics -->
 	</head>
-	<body tabindex="0">
+	<body>
 		<div id="open-menu-btn">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +65,7 @@
 								name="onoffswitch"
 								class="onoffswitch-checkbox"
 								id="lang-switch"
+								aria-label="Switch language between English and Italian"
 							/>
 							<label class="onoffswitch-label" for="lang-switch">
 								<span class="onoffswitch-inner"></span>
@@ -86,14 +92,16 @@
 					<div class="hero__badges" aria-label="Key specializations">
 						<span class="specialty-badge" id="badge-enterprise">Enterprise Solutions</span>
 						<span class="specialty-badge" id="badge-ai">AI-Enhanced Development</span>
-						<span class="specialty-badge" id="badge-tools">Creator of Developer Tools</span>
+						<span class="specialty-badge" id="badge-tools"
+							>Creator of Developer Tools</span
+						>
 					</div>
 				</div>
 			</div>
 		</header>
 		<!-- about -->
 		<section class="section about" id="about">
-			<h2 id="about-title" class="about-title">ABOUT ME</h2>
+			<h2 id="about-title" class="about-title">About me</h2>
 			<div class="about-text-card" id="about-text">
 				<p>
 					I build web applications that solve real business problems.
@@ -132,7 +140,7 @@
 		</section>
 		<!-- services -->
 		<section class="section services" id="services">
-			<h2 id="services-title" class="services-title">SERVICES & EXPERTISE</h2>
+			<h2 id="services-title" class="services-title">Services & expertise</h2>
 			<div class="services-grid">
 				<article class="service-card">
 					<div class="service-icon">
@@ -178,7 +186,7 @@
 		</section>
 		<!-- tech stack -->
 		<section class="section tech-stack" id="tech-stack">
-			<h2 id="tech-stack-title" class="tech-stack-title">TECH STACK</h2>
+			<h2 id="tech-stack-title" class="tech-stack-title">Tech stack</h2>
 			<div class="tech-categories">
 				<div class="tech-category">
 					<h3 id="tech-frontend-title" class="tech-category-title">Frontend</h3>
@@ -226,7 +234,7 @@
 		</section>
 		<!-- extensions stats -->
 		<section class="section extensions-stats" id="extensions-stats">
-			<h2 id="extensions-title" class="extensions-title">PUBLISHED VS CODE EXTENSIONS</h2>
+			<h2 id="extensions-title" class="extensions-title">Published VS Code extensions</h2>
 			<p id="extensions-subtitle" class="extensions-subtitle">Developer productivity tools used by thousands worldwide</p>
 			<div class="stats-grid">
 				<div class="stat-card">
@@ -260,7 +268,7 @@
 		</section>
 		<!-- projects -->
 		<section class="section projects" id="projects">
-			<h2 id="projects-header">SIDE PROJECTS</h2>
+			<h2 id="projects-header">Side projects</h2>
 			<!-- #MARK: Swiper -->
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
@@ -280,7 +288,7 @@
 									<img
 										class="project-screenshot"
 										src="./media/img/vscode-todo/preview.png"
-										alt="Project planner screenshot"
+										alt="VS Code Todo extension screenshot"
 										width="613"
 										height="461"
 									/>
@@ -337,7 +345,7 @@
 									<img
 										class="project-screenshot"
 										src="./media/img/Last-log/preview.png"
-										alt="Project planner screenshot"
+										alt="Last Log extension screenshot"
 										width="613"
 										height="461"
 									/>
@@ -549,8 +557,11 @@
 		</section>
 		<!-- contact -->
 		<footer class="section contact" id="contact">
-			<h2 id="footer-title" class="footer-title">CONTACT ME</h2>
+			<h2 id="footer-title" class="footer-title">Contact me</h2>
 			<form action="https://formspree.io/f/mwkybgav" method="POST">
+				<label for="form-name" id="form-name-label" class="visually-hidden"
+					>Your Name</label
+				>
 				<input
 					type="text"
 					name="your-name"
@@ -559,21 +570,24 @@
 					placeholder="Your Name"
 					required
 				/>
+				<label for="form-email" id="form-email-label" class="visually-hidden"
+					>Email</label
+				>
 				<input
 					type="email"
 					name="email"
 					value=""
 					id="form-email"
-					aria-required="true"
-					aria-invalid="true"
 					placeholder="Email"
 					required
 				/>
+				<label for="form-message" id="form-message-label" class="visually-hidden"
+					>Message</label
+				>
 				<textarea
 					name="message"
 					rows="8"
 					id="form-message"
-					aria-invalid="false"
 					placeholder="Message"
 					required
 				></textarea>

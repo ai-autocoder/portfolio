@@ -35,6 +35,7 @@ export function updateContent() {
 		"nav-about": "nav.about",
 		"nav-projects": "nav.projects",
 		"nav-contact": "nav.contact",
+		"nav-blog": "nav.blog",
 		"banner-name": "banner.name",
 		"banner-title": "banner.title",
 		"badge-tools": "banner.badges.tools",
@@ -66,7 +67,11 @@ export function updateContent() {
 		"projects-header": "projects.header",
 		"footer-title": "contact.title",
 		"form-name": "placeholder.attribute.contact.form.name",
+		"form-email": "placeholder.attribute.contact.form.email",
 		"form-message": "placeholder.attribute.contact.form.message",
+		"form-name-label": "contact.form.name",
+		"form-email-label": "contact.form.email",
+		"form-message-label": "contact.form.message",
 		"form-send": "contact.form.send",
 	};
 
@@ -78,6 +83,7 @@ export function updateContent() {
 export function setupLanguageSwitch() {
 	document.getElementById("lang-switch").checked =
 		i18next.language.startsWith("en");
+	syncHtmlLang();
 
 	document.getElementById("lang-switch").addEventListener("click", () => {
 		const newLanguage = i18next.language.startsWith("en") ? "it" : "en";
@@ -85,8 +91,15 @@ export function setupLanguageSwitch() {
 	});
 
 	i18next.on("languageChanged", () => {
+		syncHtmlLang();
 		updateContent();
 	});
+}
+
+function syncHtmlLang() {
+	document.documentElement.lang = i18next.language.startsWith("it")
+		? "it"
+		: "en";
 }
 
 function updateElementContent(id, key) {

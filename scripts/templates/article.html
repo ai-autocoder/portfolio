@@ -12,21 +12,33 @@
 
   <!-- Open Graph & Twitter Card Tags -->
   {{{metaTags}}}
+  {{#unless article.image}}
+  <meta property="og:image" content="../media/img/og-default.jpg">
+  <meta name="twitter:image" content="../media/img/og-default.jpg">
+  {{/unless}}
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../styles/style.scss">
   <!-- Custom fonts preload -->
-  <link rel="preload" href="../fonts/canela-medium.otf" as="font" type="font/otf" crossorigin />
-  <link rel="preload" href="../fonts/sohne-buch.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="../fonts/fraunces-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
 
-  <!-- Highlight.js Theme for Code Syntax Highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b76f9dab46e24259914b250c68aa1724"}'></script>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="nav show-menu" aria-label="Main navigation">
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
       <li><a href="index.html">Blog</a></li>
     </ul>
   </nav>
@@ -74,7 +86,10 @@
           </p>
         </div>
 
-        <a href="index.html" class="button-primary">← Back to Blog</a>
+        <div class="article-cta">
+          <a href="../index.html#contact" class="button-primary">Get in touch</a>
+          <a href="index.html" class="button-secondary">← Back to Blog</a>
+        </div>
       </footer>
     </article>
   </main>
