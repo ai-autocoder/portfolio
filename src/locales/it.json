@@ -2,19 +2,20 @@
 	"nav": {
 		"about": "Chi Sono",
 		"projects": "Progetti",
-		"contact": "Contattami"
+		"contact": "Contattami",
+		"blog": "Blog"
 	},
 	"banner": {
 		"name": "Francesco Anzalone",
 		"title": "Full Stack Software Engineer",
 		"badges": {
-			"tools": "Tool Open Source",
+			"tools": "Creatore di Tool per Developer",
 			"ai": "Sviluppo Potenziato da AI",
 			"enterprise": "Soluzioni Enterprise"
 		}
 	},
 	"about": {
-		"title": "CHI SONO",
+		"title": "Chi sono",
 		"text": [
 			"Realizzo applicazioni web che risolvono problemi aziendali concreti.",
 			"Come Sviluppatore Full Stack, ho modernizzato piattaforme B2B legacy per grandi aziende europee, creato sistemi di recruitment automatizzati che gestiscono migliaia di candidature e sviluppato tool di produttività utilizzati da developer in tutto il mondo.",
@@ -24,10 +25,10 @@
 		]
 	},
 	"projects": {
-		"header": "PROGETTI PERSONALI"
+		"header": "Progetti personali"
 	},
 	"services": {
-		"title": "SERVIZI & COMPETENZE",
+		"title": "Servizi & competenze",
 		"items": [
 			{
 				"title": "Sviluppo Full-Stack",
@@ -48,7 +49,7 @@
 		]
 	},
 	"techStack": {
-		"title": "STACK TECNOLOGICO",
+		"title": "Stack tecnologico",
 		"categories": {
 			"frontend": {
 				"title": "Frontend",
@@ -69,7 +70,7 @@
 		}
 	},
 	"extensions": {
-		"title": "ESTENSIONI VS CODE PUBBLICATE",
+		"title": "Estensioni VS Code pubblicate",
 		"subtitle": "Tool di produttività usati da migliaia di developer in tutto il mondo",
 		"stats": {
 			"downloads": "Download Totali",
@@ -80,9 +81,10 @@
 		"cta": "Vai al Marketplace"
 	},
 	"contact": {
-		"title": "CONTATTAMI",
+		"title": "Contattami",
 		"form": {
 			"name": "Nome",
+			"email": "Email",
 			"message": "Messaggio",
 			"send": "Invia"
 		}

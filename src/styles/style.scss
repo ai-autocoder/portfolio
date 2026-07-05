@@ -21,6 +21,19 @@
 	white-space: nowrap;
 }
 
+// Screen-reader-only content (e.g. form labels)
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
 :root {
 	scroll-behavior: smooth;
 	font-family: $font-body;
@@ -88,7 +101,7 @@
 	}
 }
 
-.extensions-grid .extension-card.scroll-visible {
+.stats-grid .stat-card.scroll-visible {
 	@for $i from 1 through 4 {
 		&:nth-child(#{$i}) {
 			animation-delay: #{($i - 1) * 0.1}s;
@@ -236,9 +249,19 @@ a {
 }
 
 // Blog pages navigation - horizontal layout
-body:has(.blog-index-container, .article-container) .nav-links {
-	flex-direction: row;
-	justify-content: flex-end;
+body:has(.blog-index-container, .article-container) .nav {
+	.nav-links {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+
+	// Compact links so the full nav fits on small screens
+	@media (max-width: #{$breakpoint-md - 1px}) {
+		.nav-links a {
+			padding: $space-4 $space-3;
+		}
+	}
 }
 
 // =============================================================================
@@ -304,23 +327,6 @@ body:has(.blog-index-container, .article-container) .nav-links {
 	z-index: 1;
 }
 
-// Tech icons grid
-.icons {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	font-size: 2em;
-	justify-items: center;
-	margin: auto;
-	width: fit-content;
-	gap: 8vw;
-}
-
-.icon-container:nth-child(1n + 5) .banner-tooltip {
-	top: 110%;
-	bottom: unset;
-	left: 50%;
-}
-
 svg {
 	width: 1.125em;
 	height: 1.125em;
@@ -331,33 +337,6 @@ svg {
 svg:hover {
 	fill: $accent-primary;
 	transform: scale(1.1);
-}
-
-.icon-container {
-	position: relative;
-
-	.banner-tooltip {
-		font-size: 0.5em;
-		font-family: $font-body;
-		font-weight: 500;
-		white-space: nowrap;
-		color: $accent-primary;
-		text-shadow: 0px 0px 20px $background-deep;
-		text-align: center;
-		padding: $space-2;
-		position: absolute;
-		z-index: 1;
-		bottom: 110%;
-		left: 50%;
-		transform: translateX(-50%);
-		opacity: 0;
-		transition: opacity $transition-base;
-		cursor: default;
-	}
-
-	svg:hover ~ .banner-tooltip {
-		opacity: 1;
-	}
 }
 
 .title-container {
@@ -416,19 +395,6 @@ svg:hover {
 		border-color: $border-accent-strong;
 		transform: translateY(-2px);
 		box-shadow: 0 4px 12px rgba($accent-primary, 0.15);
-	}
-}
-
-// Legacy title class
-.title {
-	margin-bottom: 10vh;
-	font-family: $font-display;
-	font-size: clamp(1.4rem, 0.7297rem + 3.3514vw, 4.5rem);
-	letter-spacing: -0.02em;
-	line-height: 1.2;
-
-	.title-span {
-		color: $accent-primary;
 	}
 }
 
@@ -583,7 +549,7 @@ svg:hover {
 		font-family: $font-display;
 		font-size: $text-lg;
 		margin-bottom: $space-4;
-		color: $accent-primary;
+		color: $text-primary;
 	}
 
 	.service-description {
@@ -614,7 +580,7 @@ svg:hover {
 		.tech-category-title {
 			font-family: $font-display;
 			margin-bottom: $space-4;
-			color: $accent-primary;
+			color: $text-primary;
 			font-size: $text-lg;
 			text-align: center;
 		}
@@ -899,10 +865,6 @@ svg:hover {
 // =============================================================================
 
 @media screen and (min-width: $breakpoint-sm) {
-	.title {
-		font-size: clamp(1.7rem, 1.2027rem + 2.4865vw, 4rem);
-	}
-
 	.specialty-badge {
 		padding: $space-3 $space-5;
 		font-size: $text-sm;
@@ -975,16 +937,6 @@ svg:hover {
 				left: 20%;
 			}
 		}
-	}
-
-	.icons {
-		grid-template-columns: repeat(8, 1fr);
-		gap: 4vw;
-	}
-
-	.icon-container:nth-child(1n + 5) .banner-tooltip {
-		top: unset;
-		bottom: 110%;
 	}
 
 	.about .about-text-card {
@@ -1078,7 +1030,3 @@ svg:hover {
 	animation: fadeInUp 0.6s ease-out 0.2s backwards;
 }
 
-// Section entrance animations (applied via intersection observer in JS if needed)
-.section {
-	animation: fadeIn 0.5s ease-out;
-}

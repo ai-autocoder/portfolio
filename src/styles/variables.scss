@@ -5,9 +5,9 @@
 // -----------------------------------------------------------------------------
 // Typography
 // -----------------------------------------------------------------------------
-$font-display: 'Canela', Georgia, serif;
-$font-body: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$font-mono: 'Sohne Mono', 'JetBrains Mono', 'Fira Code', monospace;
+$font-display: 'Fraunces', Georgia, serif;
+$font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
 // Font sizes (fluid typography)
 $text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -41,7 +41,8 @@ $accent-glow: rgba(14, 165, 233, 0.25);
 // Text colors
 $text-primary: #F8FAFC;
 $text-secondary: #CBD5E1;
-$text-tertiary: #64748B;
+// Lightest slate that keeps >=4.5:1 contrast on card backgrounds (WCAG AA)
+$text-tertiary: #94A3B8;
 
 // Border colors
 $border-subtle: rgba(148, 163, 184, 0.1);
