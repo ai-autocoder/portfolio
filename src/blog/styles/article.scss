@@ -51,7 +51,7 @@
 	h1 {
 		font-family: $font-display;
 		font-size: $text-4xl;
-		color: $accent-primary;
+		color: $text-primary;
 		margin-bottom: $space-4;
 		line-height: 1.15;
 		font-weight: 500;
@@ -122,12 +122,14 @@
 	// Markdown typography styles
 	h2, h3, h4, h5, h6 {
 		font-family: $font-display;
-		color: $accent-primary;
+		color: $text-primary;
 		margin-top: 2.5em;
 		margin-bottom: 0.75em;
 		font-weight: 500;
 		line-height: 1.3;
 		letter-spacing: -0.02em;
+		// Override the centered section-title default from style.scss
+		text-align: left;
 	}
 
 	h2 {
@@ -245,6 +247,74 @@
 			line-height: 1.6;
 			color: #a9b1d6;
 		}
+
+		// Syntax token colors - Tokyo Night palette, matching the pre
+		// background above (replaces the former CDN atom-one-dark theme)
+		.hljs-comment,
+		.hljs-quote {
+			color: #565f89;
+			font-style: italic;
+		}
+
+		.hljs-keyword,
+		.hljs-selector-tag,
+		.hljs-literal,
+		.hljs-section,
+		.hljs-doctag {
+			color: #bb9af7;
+		}
+
+		.hljs-string,
+		.hljs-regexp,
+		.hljs-addition {
+			color: #9ece6a;
+		}
+
+		.hljs-number,
+		.hljs-symbol,
+		.hljs-bullet,
+		.hljs-meta {
+			color: #ff9e64;
+		}
+
+		.hljs-title,
+		.hljs-function .hljs-title {
+			color: #7aa2f7;
+		}
+
+		.hljs-type,
+		.hljs-class .hljs-title,
+		.hljs-built_in {
+			color: #2ac3de;
+		}
+
+		.hljs-attr,
+		.hljs-attribute,
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-selector-class,
+		.hljs-selector-id {
+			color: #73daca;
+		}
+
+		.hljs-name,
+		.hljs-tag,
+		.hljs-deletion {
+			color: #f7768e;
+		}
+
+		.hljs-operator,
+		.hljs-punctuation {
+			color: #89ddff;
+		}
+
+		.hljs-emphasis {
+			font-style: italic;
+		}
+
+		.hljs-strong {
+			font-weight: 600;
+		}
 	}
 
 	// Inline code
@@ -315,7 +385,7 @@
 
 		h3 {
 			font-family: $font-display;
-			color: $accent-primary;
+			color: $text-primary;
 			margin-bottom: $space-3;
 			font-size: $text-xl;
 			font-weight: 500;
@@ -339,24 +409,15 @@
 		}
 	}
 
-	.button-primary {
-		display: inline-flex;
+	.article-cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: $space-4;
 		margin-top: $space-4;
 	}
 }
 
-// Article entrance animation
+// Article entrance animation (keyframes defined once in styles/style.scss)
 .blog-article {
-	animation: fadeIn 0.4s ease-out;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+	animation: fadeInUp 0.4s ease-out;
 }

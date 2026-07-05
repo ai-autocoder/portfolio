@@ -1,53 +1,55 @@
 // =============================================================================
 // Font Face Declarations
 // =============================================================================
+// Open-source, self-hosted WOFF2 fonts (latin subset):
+// - Fraunces (display serif), Inter (body), JetBrains Mono (code)
 
-// Canela - Display/Headlines
+// Fraunces - Display/Headlines
 @font-face {
-	font-family: 'Canela';
-	src: url('../fonts/canela-regular.otf') format('opentype');
+	font-family: 'Fraunces';
+	src: url('../fonts/fraunces-400.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Canela';
-	src: url('../fonts/canela-medium.otf') format('opentype');
+	font-family: 'Fraunces';
+	src: url('../fonts/fraunces-500.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
-// Söhne - Body Text
+// Inter - Body Text
 @font-face {
-	font-family: 'Sohne';
-	src: url('../fonts/sohne-buch.otf') format('opentype');
+	font-family: 'Inter';
+	src: url('../fonts/inter-400.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Sohne';
-	src: url('../fonts/sohne-kraftig.otf') format('opentype');
+	font-family: 'Inter';
+	src: url('../fonts/inter-500.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Sohne';
-	src: url('../fonts/sohne-halbfett.otf') format('opentype');
+	font-family: 'Inter';
+	src: url('../fonts/inter-600.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
 
-// Söhne Mono - Code
+// JetBrains Mono - Code
 @font-face {
-	font-family: 'Sohne Mono';
-	src: url('../fonts/sohne-mono-buch.otf') format('opentype');
+	font-family: 'JetBrains Mono';
+	src: url('../fonts/jetbrains-mono-400.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;

@@ -6,9 +6,10 @@
  */
 export function generateSeoTags(article, baseUrl = 'https://francescoanzalone.com') {
   const url = `${baseUrl}/blog/${article.slug}.html`;
-  const imageUrl = article.image
-    ? `${baseUrl}${article.image}`
-    : `${baseUrl}/assets/og-default.jpg`;
+  // Articles without a frontmatter image fall back to the shared og-default
+  // image, added with a relative path in the article template so Parcel
+  // bundles it.
+  const imageUrl = article.image ? `${baseUrl}${article.image}` : null;
 
   return {
     title: `${article.title} | Francesco Anzalone`,
@@ -22,9 +23,13 @@ export function generateSeoTags(article, baseUrl = 'https://francescoanzalone.co
       { property: 'og:title', content: article.title },
       { property: 'og:description', content: article.excerpt },
       { property: 'og:url', content: url },
-      { property: 'og:image', content: imageUrl },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
+      ...(imageUrl
+        ? [
+            { property: 'og:image', content: imageUrl },
+            { property: 'og:image:width', content: '1200' },
+            { property: 'og:image:height', content: '630' },
+          ]
+        : []),
       { property: 'article:published_time', content: article.date },
       { property: 'article:author', content: 'Francesco Anzalone' },
     ],
@@ -34,7 +39,7 @@ export function generateSeoTags(article, baseUrl = 'https://francescoanzalone.co
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: article.title },
       { name: 'twitter:description', content: article.excerpt },
-      { name: 'twitter:image', content: imageUrl },
+      ...(imageUrl ? [{ name: 'twitter:image', content: imageUrl }] : []),
     ],
   };
 }

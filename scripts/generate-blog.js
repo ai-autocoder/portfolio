@@ -26,6 +26,14 @@ async function generateBlog() {
       fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     }
 
+    // Remove previously generated pages so renamed/deleted articles
+    // don't linger as stale HTML files
+    for (const file of fs.readdirSync(OUTPUT_DIR)) {
+      if (file.endsWith('.html')) {
+        fs.unlinkSync(path.join(OUTPUT_DIR, file));
+      }
+    }
+
     // Get all markdown files from content directory
     const markdownFiles = fs.readdirSync(CONTENT_DIR)
       .filter(file => file.endsWith('.md'));
