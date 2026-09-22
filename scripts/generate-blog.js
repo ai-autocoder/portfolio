@@ -110,6 +110,11 @@ function processMarkdownFile(filename) {
   // Parse markdown content to HTML
   const htmlContent = parseMarkdown(content);
 
+  // Read time is computed from the actual word count (~225 wpm) because
+  // hand-maintained frontmatter readTime values drift out of sync
+  const wordCount = content.split(/\s+/).filter(Boolean).length;
+  const readTime = Math.max(1, Math.ceil(wordCount / 225));
+
   // Create article object
   const article = {
     slug,
@@ -118,8 +123,11 @@ function processMarkdownFile(filename) {
     dateFormatted: formatDate(frontmatter.date),
     excerpt: frontmatter.excerpt,
     tags: frontmatter.tags,
-    readTime: frontmatter.readTime,
+    readTime,
     image: frontmatter.image || null,
+    // Relative images render on the page but can't serve as og:image;
+    // the template falls back to og-default unless this is true
+    ogImageAbsolute: /^https?:\/\//.test(frontmatter.image || ''),
     htmlContent,
   };
 

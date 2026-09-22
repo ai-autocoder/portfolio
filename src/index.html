@@ -10,7 +10,7 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Francesco Anzalone - Full Stack Software Engineer" />
 		<meta property="og:description" content="Full Stack Software Engineer specializing in React, Node.js, and TypeScript. Creator of developer tools and AI-enhanced development solutions for enterprise applications." />
-		<meta property="og:url" content="https://francescoanzalone.com/" />
+		<meta property="og:url" content="https://francescoanzalone.dev/" />
 		<meta property="og:image" content="./media/img/og-default.jpg" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Francesco Anzalone - Full Stack Software Engineer" />
@@ -96,6 +96,14 @@
 							>Creator of Developer Tools</span
 						>
 					</div>
+					<div class="hero__cta">
+						<a href="#projects" class="button-primary" id="hero-cta-projects"
+							>View projects</a
+						>
+						<a href="#contact" class="button-secondary" id="hero-cta-contact"
+							>Contact me</a
+						>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -107,16 +115,16 @@
 					I build web applications that solve real business problems.
 				</p>
 				<p>
-					As a Full Stack Developer, I've re-engineered legacy B2B platforms serving major European enterprises, created automated recruitment systems processing thousands of applications, and developed productivity tools used by developers worldwide.
+					For the past four years I've been re-engineering a legacy B2B platform used by major European tour operators, taking an IE-only codebase to a modern front end without interrupting the business that runs on it.
 				</p>
 				<p>
-					My technical foundation: React, TypeScript, Node.js, modern DevOps, and a deep understanding of both frontend architecture and backend systems. My differentiator: strategic use of AI development tools to deliver better code, faster.
+					As a freelance developer I designed and delivered a recruitment platform end to end: Next.js front end, serverless Node.js back end, PDF generation, transactional email and a CI/CD pipeline, without storing any candidate data. One developer, about three months.
 				</p>
 				<p>
-					I'm not just a developer who codes - I'm a problem-solver who builds systems that scale, workflows that optimize team productivity, and tools that have measurable business impact.
+					On the side I've published four VS Code extensions with over 16,000 installs, all born from real workflow problems. I also work daily with AI development tools (Claude Code, GitHub Copilot) to ship better code, faster.
 				</p>
 				<p>
-					Published open source contributor. Remote-ready. Available for enterprise software companies seeking developers who deliver results.
+					Based in the UK, available for remote or hybrid roles with enterprise software teams.
 				</p>
 			</div>
 			<div class="about-links">
@@ -180,7 +188,7 @@
 						</svg>
 					</div>
 					<h3 id="service-4-title" class="service-title">AI-Powered Development</h3>
-					<p id="service-4-description" class="service-description">Leveraging cutting-edge AI tools (GitHub Copilot, Claude Code, Codex) to accelerate delivery and enhance code quality</p>
+					<p id="service-4-description" class="service-description">Using AI tools (GitHub Copilot, Claude Code, Codex) daily to accelerate delivery and improve code quality</p>
 				</article>
 			</div>
 		</section>
@@ -192,6 +200,7 @@
 					<h3 id="tech-frontend-title" class="tech-category-title">Frontend</h3>
 					<div id="tech-frontend-list" class="tech-list">
 						<span class="tech-badge">React</span>
+						<span class="tech-badge">Next.js</span>
 						<span class="tech-badge">Angular</span>
 						<span class="tech-badge">Vue.js</span>
 						<span class="tech-badge">TypeScript</span>
@@ -199,6 +208,7 @@
 						<span class="tech-badge">HTML5</span>
 						<span class="tech-badge">CSS3</span>
 						<span class="tech-badge">SASS</span>
+						<span class="tech-badge">Tailwind CSS</span>
 					</div>
 				</div>
 				<div class="tech-category">
@@ -214,6 +224,7 @@
 					<h3 id="tech-devops-title" class="tech-category-title">DevOps & Tools</h3>
 					<div id="tech-devops-list" class="tech-list">
 						<span class="tech-badge">Git</span>
+						<span class="tech-badge">GitHub Actions</span>
 						<span class="tech-badge">Docker</span>
 						<span class="tech-badge">CI/CD</span>
 						<span class="tech-badge">Webpack</span>
@@ -227,6 +238,9 @@
 						<span class="tech-badge">VS Code Extension API</span>
 						<span class="tech-badge">Redux</span>
 						<span class="tech-badge">RxJS</span>
+						<span class="tech-badge">Jest</span>
+						<span class="tech-badge">Vitest</span>
+						<span class="tech-badge">Playwright</span>
 						<span class="tech-badge">Agile/Scrum</span>
 					</div>
 				</div>
@@ -238,20 +252,20 @@
 			<p id="extensions-subtitle" class="extensions-subtitle">Developer productivity tools used by thousands worldwide</p>
 			<div class="stats-grid">
 				<div class="stat-card">
-					<div class="stat-number">10K+</div>
-					<div id="stat-downloads" class="stat-label">Total Downloads</div>
+					<div class="stat-number">16K+</div>
+					<div id="stat-downloads" class="stat-label">Installs</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-number">5K+</div>
-					<div id="stat-users" class="stat-label">Active Users</div>
+					<div class="stat-number">4</div>
+					<div id="stat-extensions" class="stat-label">Published Extensions</div>
 				</div>
 				<div class="stat-card">
 					<div class="stat-number">4.5</div>
 					<div id="stat-rating" class="stat-label">Average Rating</div>
 				</div>
 				<div class="stat-card">
-					<div class="stat-number">4</div>
-					<div id="stat-extensions" class="stat-label">Published Extensions</div>
+					<div class="stat-number">100%</div>
+					<div id="stat-opensource" class="stat-label">Open Source</div>
 				</div>
 			</div>
 			<div class="extensions-cta">
@@ -268,10 +282,55 @@
 		</section>
 		<!-- projects -->
 		<section class="section projects" id="projects">
-			<h2 id="projects-header">Side projects</h2>
+			<h2 id="projects-header">Projects</h2>
 			<!-- #MARK: Swiper -->
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
+					<!-- CargoCrew -->
+					<div class="swiper-slide">
+						<article class="project-card">
+							<div class="project-screenshot-container">
+								<picture>
+									<source
+										type="image/png"
+										srcset="./media/img/cargo-crew/preview.png"
+									/>
+									<img
+										class="project-screenshot"
+										src="./media/img/cargo-crew/preview.png"
+										alt="CargoCrew recruitment platform screenshot"
+										width="613"
+										height="470"
+									/>
+								</picture>
+							</div>
+							<div class="project-technology-list">
+								<span>Next.js</span>
+								<span>Tailwind CSS</span>
+								<span>Netlify Functions</span>
+							</div>
+							<h3 class="project-title">CargoCrew (Client&nbsp;Project)</h3>
+
+							<p class="project-description">
+								A recruitment platform for airport logistics, designed and
+								delivered end to end as a solo freelance project. Multi-step
+								forms collect documents, ID photos, and digital signatures with
+								real-time validation; a serverless Node.js backend generates
+								PDFs and automates candidate emails, replacing the agency's
+								manual data handling entirely.
+							</p>
+							<div class="project-links">
+								<a
+									class="button-primary"
+									href="https://cargo-crew.co.uk/"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Visit the live CargoCrew website (opens in a new tab)"
+									>View live</a
+								>
+							</div>
+						</article>
+					</div>
 					<!-- VS Code Todo -->
 					<div class="swiper-slide">
 						<article class="project-card">
@@ -490,65 +549,6 @@
 							</div>
 						</article>
 					</div>
-					<!-- Project/task planner -->
-					<div class="swiper-slide">
-						<article class="project-card">
-							<div class="project-screenshot-container">
-								<picture>
-									<source
-										type="image/webp"
-										srcset="
-											./media/img/project-planner/Project%20planner%20preview.webp
-										"
-									/>
-									<source
-										type="image/jpeg"
-										srcset="
-											./media/img/project-planner/Project%20planner%20preview.jpg
-										"
-									/>
-									<img
-										class="project-screenshot"
-										src="./media/img/project-planner/Project%20planner%20preview.jpg"
-										alt="Project planner screenshot"
-										width="613"
-										height="461"
-									/>
-								</picture>
-							</div>
-							<div class="project-technology-list">
-								<span>Html5</span>
-								<span>Css (Sass)</span>
-								<span>Javascript</span>
-							</div>
-							<h3 class="project-title">Project/task planner</h3>
-
-							<p class="project-description">
-								Designed and written from scratch using HTML5, custom CSS styles
-								with Sass, Javascript. Using Javascript to store data on the
-								browser`s localStorage, calculate the time required and the
-								estimated finish date, manipulate the DOM dynamically as tasks
-								are added, deleted, or completed.
-							</p>
-							<div class="project-links">
-								<a
-									class="button-primary"
-									href="https://project-planner-preview.netlify.app/"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="View live preview of the project (opens in a new tab)"
-									>View live</a
-								><a
-									class="button-secondary"
-									href="https://github.com/ai-autocoder/project-planner"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Visit the project's GitHub repository (opens in a new tab)"
-									>GitHub</a
-								>
-							</div>
-						</article>
-					</div>
 				</div>
 				<div class="swiper-pagination"></div>
 				<div class="swiper-button-next"></div>
@@ -600,6 +600,30 @@
 					Send
 				</button>
 			</form>
+			<div class="contact-direct">
+				<p id="contact-direct-text">Prefer email? Reach me directly:</p>
+				<div class="contact-direct-links">
+					<a href="mailto:francesco.a@mail.com" class="button-secondary"
+						>francesco.a@mail.com</a
+					>
+					<a
+						href="https://linkedin.com/in/f-anzalone"
+						class="button-secondary"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Visit my LinkedIn profile (opens in a new tab)"
+						>LinkedIn</a
+					>
+					<a
+						href="https://github.com/ai-autocoder"
+						class="button-secondary"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Visit my GitHub profile (opens in a new tab)"
+						>GitHub</a
+					>
+				</div>
+			</div>
 		</footer>
 		<script type="module" src="./index.js"></script>
 	</body>

@@ -373,6 +373,14 @@ svg:hover {
 	gap: $space-3;
 	justify-content: center;
 	margin-top: $space-6;
+	margin-bottom: $space-8;
+}
+
+.hero__cta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $space-4;
+	justify-content: center;
 	margin-bottom: 10vh;
 }
 
@@ -858,6 +866,22 @@ svg:hover {
 	button[type="submit"] {
 		margin-top: $space-4;
 	}
+
+	.contact-direct {
+		margin-top: $space-10;
+
+		p {
+			margin-bottom: $space-4;
+			color: $text-secondary;
+		}
+	}
+
+	.contact-direct-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: $space-4;
+		justify-content: center;
+	}
 }
 
 // =============================================================================
@@ -1028,5 +1052,9 @@ svg:hover {
 
 .hero__badges {
 	animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.hero__cta {
+	animation: fadeInUp 0.6s ease-out 0.3s backwards;
 }
 

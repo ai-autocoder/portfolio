@@ -4,12 +4,13 @@
  * @param {string} baseUrl - Base URL of the website
  * @returns {Object} - SEO metadata object
  */
-export function generateSeoTags(article, baseUrl = 'https://francescoanzalone.com') {
+export function generateSeoTags(article, baseUrl = 'https://francescoanzalone.dev') {
   const url = `${baseUrl}/blog/${article.slug}.html`;
-  // Articles without a frontmatter image fall back to the shared og-default
-  // image, added with a relative path in the article template so Parcel
-  // bundles it.
-  const imageUrl = article.image ? `${baseUrl}${article.image}` : null;
+  // Only absolute URLs are usable as og:image (Parcel hashes bundled
+  // assets, so a relative frontmatter image has no stable public URL).
+  // Relative images are display-only; the article template adds the
+  // shared og-default fallback for social sharing in that case.
+  const imageUrl = article.image && /^https?:\/\//.test(article.image) ? article.image : null;
 
   return {
     title: `${article.title} | Francesco Anzalone`,

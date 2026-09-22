@@ -12,7 +12,7 @@
 
   <!-- Open Graph & Twitter Card Tags -->
   {{{metaTags}}}
-  {{#unless article.image}}
+  {{#unless article.ogImageAbsolute}}
   <meta property="og:image" content="../media/img/og-default.jpg">
   <meta name="twitter:image" content="../media/img/og-default.jpg">
   {{/unless}}
@@ -80,14 +80,21 @@
           <h3>About the Author</h3>
           <p>
             <strong>Francesco Anzalone</strong> is a Full Stack Developer specializing in
-            TypeScript, React, and scalable architectures. Connect on
+            React, TypeScript, and Node.js. He's published four VS Code extensions with
+            16,000+ installs and has been modernizing a legacy B2B platform used across Europe.
+            Currently focused on serverless architectures and AI-assisted development.
+            Connect on
             <a href="https://www.linkedin.com/in/f-anzalone" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             or <a href="https://github.com/ai-autocoder" target="_blank" rel="noopener noreferrer">GitHub</a>.
           </p>
         </div>
 
         <div class="article-cta">
-          <a href="../index.html#contact" class="button-primary">Get in touch</a>
+          <p>
+            I'm currently open to full-stack opportunities. If your team faces
+            similar challenges, let's talk.
+          </p>
+          <a href="mailto:francesco.a@mail.com" class="button-primary">Email me</a>
           <a href="index.html" class="button-secondary">← Back to Blog</a>
         </div>
       </footer>

@@ -12,20 +12,24 @@
 			"tools": "Creator of Developer Tools",
 			"ai": "AI-Enhanced Development",
 			"enterprise": "Enterprise Solutions"
+		},
+		"cta": {
+			"projects": "View projects",
+			"contact": "Contact me"
 		}
 	},
 	"about": {
 		"title": "About me",
 		"text": [
 			"I build web applications that solve real business problems.",
-			"As a Full Stack Developer, I've re-engineered legacy B2B platforms serving major European enterprises, created automated recruitment systems processing thousands of applications, and developed productivity tools used by developers worldwide.",
-			"My technical foundation: React, TypeScript, Node.js, modern DevOps, and a deep understanding of both frontend architecture and backend systems. My differentiator: strategic use of AI development tools to deliver better code, faster.",
-			"I'm not just a developer who codes - I'm a problem-solver who builds systems that scale, workflows that optimize team productivity, and tools that have measurable business impact.",
-			"Published open source contributor. Remote-ready. Available for enterprise software companies seeking developers who deliver results."
+			"For the past four years I've been re-engineering a legacy B2B platform used by major European tour operators, taking an IE-only codebase to a modern front end without interrupting the business that runs on it.",
+			"As a freelance developer I designed and delivered a recruitment platform end to end: Next.js front end, serverless Node.js back end, PDF generation, transactional email and a CI/CD pipeline, without storing any candidate data. One developer, about three months.",
+			"On the side I've published four VS Code extensions with over 16,000 installs, all born from real workflow problems. I also work daily with AI development tools (Claude Code, GitHub Copilot) to ship better code, faster.",
+			"Based in the UK, available for remote or hybrid roles with enterprise software teams."
 		]
 	},
 	"projects": {
-		"header": "Side projects"
+		"header": "Projects"
 	},
 	"services": {
 		"title": "Services & expertise",
@@ -44,7 +48,7 @@
 			},
 			{
 				"title": "AI-Powered Development",
-				"description": "Leveraging cutting-edge AI tools (GitHub Copilot, Claude Code, Codex) to accelerate delivery and enhance code quality"
+				"description": "Using AI tools (GitHub Copilot, Claude Code, Codex) daily to accelerate delivery and improve code quality"
 			}
 		]
 	},
@@ -53,7 +57,7 @@
 		"categories": {
 			"frontend": {
 				"title": "Frontend",
-				"technologies": ["React", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS"]
+				"technologies": ["React", "Next.js", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS", "Tailwind CSS"]
 			},
 			"backend": {
 				"title": "Backend",
@@ -61,11 +65,11 @@
 			},
 			"devops": {
 				"title": "DevOps & Tools",
-				"technologies": ["Git", "Docker", "CI/CD", "Webpack", "Parcel", "npm"]
+				"technologies": ["Git", "GitHub Actions", "Docker", "CI/CD", "Webpack", "Parcel", "npm"]
 			},
 			"other": {
 				"title": "Other",
-				"technologies": ["VS Code Extension API", "Redux", "RxJS", "Agile/Scrum"]
+				"technologies": ["VS Code Extension API", "Redux", "RxJS", "Jest", "Vitest", "Playwright", "Agile/Scrum"]
 			}
 		}
 	},
@@ -73,8 +77,8 @@
 		"title": "Published VS Code extensions",
 		"subtitle": "Developer productivity tools used by thousands worldwide",
 		"stats": {
-			"downloads": "Total Downloads",
-			"users": "Active Users",
+			"downloads": "Installs",
+			"openSource": "Open Source",
 			"rating": "Average Rating",
 			"extensions": "Published Extensions"
 		},
@@ -82,6 +86,7 @@
 	},
 	"contact": {
 		"title": "Contact me",
+		"direct": "Prefer email? Reach me directly:",
 		"form": {
 			"name": "Your Name",
 			"email": "Email",
