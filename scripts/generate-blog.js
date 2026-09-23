@@ -55,6 +55,10 @@ async function generateBlog() {
     for (const file of markdownFiles) {
       try {
         const article = await processMarkdownFile(file);
+        if (!article) {
+          console.log(`   - ${file} skipped (published: false)`);
+          continue;
+        }
         articles.push(article);
         console.log(`   ✓ ${file} → ${article.slug}.html`);
       } catch (error) {
@@ -89,7 +93,7 @@ async function generateBlog() {
 /**
  * Process a single markdown file
  * @param {string} filename - Markdown filename
- * @returns {Object} - Article object
+ * @returns {Object|null} - Article object, or null if the post is unpublished
  */
 function processMarkdownFile(filename) {
   const filePath = path.join(CONTENT_DIR, filename);
@@ -99,9 +103,10 @@ function processMarkdownFile(filename) {
   const { frontmatter, content } = parseFrontmatter(fileContent, filename);
   validateFrontmatter(frontmatter, filename);
 
-  // Skip if marked as not published
+  // Unpublished posts are still validated above, but get no page and no
+  // index entry. Returning null (not throwing) keeps the build green.
   if (frontmatter.published === false) {
-    throw new Error('Marked as unpublished (published: false)');
+    return null;
   }
 
   // Generate slug from filename (remove .md extension)
