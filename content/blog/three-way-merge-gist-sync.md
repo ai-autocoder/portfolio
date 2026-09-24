@@ -4,6 +4,7 @@ date: "2026-09-22"
 excerpt: "Two devices, one gist file, and an API with no conditional writes. How a content-based three-way merge keeps them in sync, and the bugs the tests caught."
 tags: [sync, algorithms, typescript, testing, github-api, backend]
 readTime: 9
+image: "../media/img/blog/three-way-merge-gist-sync.svg"
 ---
 
 # Syncing Todos Through a GitHub Gist: A Three-Way Merge, 149 Tests

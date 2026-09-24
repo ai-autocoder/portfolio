@@ -4,6 +4,7 @@ date: "2026-09-22"
 excerpt: "GitHub's device-flow endpoints send no CORS headers, so a PWA can't sign in. How a tiny Cloudflare Worker, with two paths and zero secrets, gets around it."
 tags: [cloudflare-workers, oauth, security, typescript, pwa, backend]
 readTime: 8
+image: "../media/img/blog/github-device-flow-cloudflare-worker.svg"
 ---
 
 # Signing In to GitHub From a PWA With a 117-Line Cloudflare Worker

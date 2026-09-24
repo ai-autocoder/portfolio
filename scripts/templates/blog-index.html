@@ -53,8 +53,8 @@
       {{#each articles}}
       <article class="article-preview">
         {{#if this.image}}
-        <a href="{{this.slug}}.html" class="article-image">
-          <img src="{{this.image}}" alt="{{this.title}}" loading="lazy">
+        <a href="{{this.slug}}.html" class="article-image" tabindex="-1" aria-hidden="true">
+          <img src="{{this.image}}" alt="" width="1200" height="630" loading="lazy">
         </a>
         {{/if}}
 

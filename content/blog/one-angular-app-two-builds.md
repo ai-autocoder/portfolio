@@ -5,6 +5,7 @@ date: "2026-09-22"
 excerpt: "The phone app for my VS Code extension isn't a second UI. It's the same Angular webview, built with a different configuration and one swapped-out bridge."
 tags: [angular, pwa, architecture, typescript, vscode, frontend]
 readTime: 7
+image: "../media/img/blog/one-angular-app-two-builds.svg"
 ---
 
 # One Angular App, Two Builds: A VS Code Webview That's Also a PWA
