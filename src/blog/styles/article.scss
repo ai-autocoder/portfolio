@@ -106,7 +106,9 @@
 	margin: $space-8 0 $space-12;
 
 	img {
+		display: block;
 		width: 100%;
+		height: auto;
 		border-radius: $radius-lg;
 		box-shadow: $shadow-md;
 	}
