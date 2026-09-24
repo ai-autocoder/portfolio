@@ -1,6 +1,6 @@
 ---
 title: "Signing In to GitHub From a PWA With a 117-Line Cloudflare Worker"
-date: "2026-09-22"
+date: "2026-09-15"
 excerpt: "GitHub's device-flow endpoints send no CORS headers, so a PWA can't sign in. How a tiny Cloudflare Worker, with two paths and zero secrets, gets around it."
 tags: [cloudflare-workers, oauth, security, typescript, pwa, backend]
 readTime: 8
