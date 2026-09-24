@@ -1,5 +1,4 @@
 ---
-published: false
 title: "One Angular App, Two Builds: A VS Code Webview That's Also a PWA"
 date: "2026-09-18"
 excerpt: "The phone app for my VS Code extension isn't a second UI. It's the same Angular webview, built with a different configuration and one swapped-out bridge."
@@ -88,7 +87,7 @@ A nice side effect: the extension build contains no PWA code at all. None of the
 - 1 Angular codebase, 2 shipped builds, 3 files swapped at build time
 - 31 commands and 7 messages in the typed webview contract
 - 0 PWA-only modules in the extension build: no gist client, no sign-in, no IndexedDB
-- 138 Karma specs across the shared components, the gateway, conflict review and the PWA shell
+- 249 Karma specs across the shared components, the gateway, the conflict prompt and review, and the PWA shell
 - 48 px touch targets on any coarse pointer, whatever the screen width
 
 ## Trade-offs
@@ -109,4 +108,4 @@ The alternative, a separate mobile app, would have given the phone a UI designed
 
 **When not to do this:** if the second platform needs a genuinely different interaction model, or the shared UI would have to fork for it, build a separate app. Sharing a UI only pays when the two products really do the same job.
 
-The code is in the [vscode-todo repository](https://github.com/ai-autocoder/vscode-todo/tree/feat/mobile-pwa-companion/webview-ui).
+Plans is live at [plans-app.pages.dev](https://plans-app.pages.dev), and the code is in the [vscode-todo repository](https://github.com/ai-autocoder/vscode-todo/tree/master/webview-ui).

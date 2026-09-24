@@ -9,7 +9,7 @@ image: "../media/img/blog/github-device-flow-cloudflare-worker.svg"
 
 # Signing In to GitHub From a PWA With a 117-Line Cloudflare Worker
 
-VS Code Todo is a todo and notes extension with over 9,000 installs across the VS Code Marketplace and Open VSX. Its lists can already sync through a secret GitHub Gist. The next step is a companion app, a PWA called Plans, that opens the same lists on a phone.
+VS Code Todo is a todo and notes extension with over 9,000 installs across the VS Code Marketplace and Open VSX. Its lists can already sync through a secret GitHub Gist. Its companion app, a PWA called [Plans](https://plans-app.pages.dev), opens the same lists on a phone.
 
 One constraint shaped everything: no application server. The extension and the PWA are peers that read and write the same gist, and the only thing I wanted to host was static files. That plan survived right up until sign-in, where the browser said no.
 
@@ -132,4 +132,4 @@ The heavier alternative is a proper auth backend: server-side sign-in, a session
 
 **When not to do this:** if the provider already sends CORS headers on its token endpoints, or your flow needs a client secret, a CORS shim is the wrong tool. And the moment you need sessions, revocation or more than one user, you need a real backend.
 
-The Worker's code is in the [vscode-todo repository](https://github.com/ai-autocoder/vscode-todo/tree/feat/mobile-pwa-companion/worker).
+The Worker's code is in the [vscode-todo repository](https://github.com/ai-autocoder/vscode-todo/tree/master/worker).

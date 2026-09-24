@@ -11,7 +11,7 @@ image: "../media/img/blog/three-way-merge-gist-sync.svg"
 
 VS Code Todo has had GitHub Gist sync since version 2.0.0: your todos and notes live in a secret gist in your own GitHub account, and every device you use reads and writes it. There's no server of mine in the middle, and no database. Just a JSON file per list.
 
-That sounds simple until two devices edit the same list. And with a phone companion app on the way, that stops being an edge case and becomes the normal case: you tick something off on your phone while your laptop, unsynced, still has edits of its own.
+That sounds simple until two devices edit the same list. And with a phone companion app, that stops being an edge case and becomes the normal case: you tick something off on your phone while your laptop, unsynced, still has edits of its own.
 
 This post is about the merge that makes that safe, the write path around it, and the bugs I found by testing it properly.
 
@@ -60,7 +60,7 @@ if (inBase && inLocal && inRemote) {
 }
 ```
 
-Conflicts are settled differently per app. The extension asks, with a quick pick, because you're sitting at the editor. The PWA can't: it syncs on window focus, often right before the phone sends the app to the background, so a blocking dialog would just get lost. It keeps the local version and records the conflict for review later.
+Both apps ask before settling a conflict. The extension uses a blocking quick pick, because you're sitting at the editor. The PWA shows its own dialog, but it also accepts a partial answer: a conflict you don't touch keeps this device's version and is filed for review later. It has to, because a phone can send the app to the background mid-dialog. The PWA's first version didn't ask at all. It kept the local version and recorded the conflict, which meant whichever device synced second silently replaced the other's edit and only said so in a banner. A policy is the wrong default when someone is there to answer.
 
 ## The Verified Write
 
@@ -117,10 +117,10 @@ This is the part I'd want an interviewer to ask about, because every one of thes
 - 13 per-item merge rules, 4 of which are conflicts
 - 3 verified-write attempts before giving up as retryable
 - 3 requests per push (read, re-read, write), and 1 when nothing changed
-- 149 test cases on the merge and the sync engine alone, 253 in the shared core package overall, with regression tests that pair "loses the edit without the guard" with "keeps it with the guard"
+- 156 test cases on the merge and the sync engine alone, 264 in the shared core package overall, with regression tests that pair "loses the edit without the guard" with "keeps it with the guard"
 - 3 seconds of debounce before a push, so a burst of edits becomes one write
 
-The shared engine and its fixes live on the release branch alongside the companion app.
+The shared engine and its fixes were merged together with the companion app.
 
 ## Trade-offs
 
@@ -140,4 +140,4 @@ CRDTs were the obvious alternative. At this scale they'd be machinery without a 
 
 **When not to do this:** if you control the backend, use its concurrency tools. Row versions and conditional writes are simpler and stronger than anything you can build on top of a plain file store. This design earns its complexity only because the storage is a gist and the users bring their own.
 
-The code is in the [vscode-todo repository](https://github.com/ai-autocoder/vscode-todo/tree/feat/mobile-pwa-companion/packages/core/src).
+The code is in the [vscode-todo repository](https://github.com/ai-autocoder/vscode-todo/tree/master/packages/core/src).
