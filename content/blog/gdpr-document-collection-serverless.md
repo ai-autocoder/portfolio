@@ -49,19 +49,23 @@ sessionStorage.removeItem("formStep");
 sessionStorage.removeItem("formData");
 ```
 
-**Function logs.** Logs live in the hosting platform's log retention, so one careless `console.log(body)` would quietly turn them into the database I'd designed away. The functions log which stage they're at and, on failure, the error message. Never the payload.
+**Function logs.** Logs live in the hosting platform's log retention, so one careless `console.log(body)` would quietly turn them into the database I'd designed away. The functions log which stage they're at and, on failure, the error message. Never the payload. The same message also goes back to the browser, which is the one part of this I'd change (more below).
 
 ```ts
 } catch (error) {
   // The error message goes to the log. The request body never does.
-  // Logs are storage too.
+  // Logs are storage too. (The message also goes back in the response: see below.)
   const errorMessage =
     error instanceof Error ? error.message : "Unknown error";
   console.error("Processing error:", errorMessage);
   return {
     statusCode: 500,
     headers,
-    body: JSON.stringify({ error: "Failed to process registration" }),
+    body: JSON.stringify({
+      error: "Failed to process registration",
+      message: errorMessage,
+      timestamp: new Date().toISOString(),
+    }),
   };
 }
 ```
@@ -80,7 +84,7 @@ It hasn't caused a problem, and the blast radius is limited (the worst case is a
 
 1. **Server-side validation with the same schema.** One schema shared by the form and the function, so the two sets of rules can't drift apart.
 2. **A locked-down CORS origin.** The function currently answers requests from any origin. It should only answer the site's own.
-3. **Error IDs instead of error messages.** Send the user an ID and log the details against it, so a support request can be matched to a log line without anything else crossing over.
+3. **Error IDs instead of error messages.** Right now the 500 response carries the raw error message back to the browser, so whatever a library threw is readable in the network tab. Send the user an ID instead and log the details against it, so a support request can be matched to a log line without anything else crossing over.
 
 ```ts
 // What I'd add: one schema, used in the browser AND in the function.
