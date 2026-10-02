@@ -36,6 +36,9 @@ $background-elevated: #334155;
 $accent-primary: #0EA5E9;
 $accent-secondary: #14B8A6;
 $accent-muted: rgba(14, 165, 233, 0.12);
+// Accent for small text on $accent-muted chips: >=4.5:1 on card backgrounds (WCAG AA),
+// where $accent-primary only reaches about 4.4:1
+$accent-text: #38BDF8;
 $accent-glow: rgba(14, 165, 233, 0.25);
 
 // Text colors

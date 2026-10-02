@@ -7,11 +7,11 @@
 	},
 	"banner": {
 		"name": "Francesco Anzalone",
-		"title": "Full Stack Software Engineer",
+		"title": "Full Stack Developer",
 		"badges": {
-			"tools": "Creator of Developer Tools",
-			"ai": "AI-Enhanced Development",
-			"enterprise": "Enterprise Solutions"
+			"stack": "TypeScript &amp; Node.js",
+			"installs": "17,000+ extension installs",
+			"location": "Based in the UK"
 		},
 		"cta": {
 			"projects": "View projects",
@@ -24,65 +24,134 @@
 			"I build web applications that solve real business problems.",
 			"For the past four years I've been re-engineering a legacy B2B platform used by major European tour operators, taking an IE-only codebase to a modern front end without interrupting the business that runs on it.",
 			"As a freelance developer I designed and delivered a recruitment platform end to end: Next.js front end, serverless Node.js back end, PDF generation, transactional email and a CI/CD pipeline, without storing any candidate data. One developer, about three months.",
-			"On the side I've published four VS Code extensions with over 16,000 installs, all born from real workflow problems. I also work daily with AI development tools (Claude Code, GitHub Copilot) to ship better code, faster.",
+			"On the side I've published four VS Code extensions with over 17,000 installs, all born from real workflow problems. I also work daily with AI development tools (Claude Code, GitHub Copilot) to ship better code, faster.",
 			"Based in the UK, available for remote or hybrid roles with enterprise software teams."
 		]
 	},
 	"projects": {
-		"header": "Projects"
-	},
-	"services": {
-		"title": "Services & expertise",
-		"items": [
-			{
-				"title": "Full-Stack Development",
-				"description": "Building scalable web applications with modern frameworks (React, Angular, Vue.js) and robust backend systems (Node.js, TypeScript)"
+		"header": "Projects",
+		"links": {
+			"liveApp": "Live app",
+			"viewLive": "View live"
+		},
+		"postsLabel": "Write-ups:",
+		"todo": {
+			"img": "VS Code Todo extension screenshot",
+			"title": "VS Code Todo (Extension + PWA)",
+			"description": "A todo and notes extension for VS Code (9,000+ installs) and Plans, a PWA that opens the same lists on a phone. One TypeScript monorepo: an Angular app built twice (webview and PWA), a shared sync engine that merges edits through a GitHub Gist with a three-way merge, a Cloudflare Worker that relays GitHub's OAuth device flow for the PWA, and a local MCP server that lets AI agents read and update the lists.",
+			"posts": {
+				"auth": "GitHub sign-in through a Cloudflare Worker",
+				"merge": "A three-way merge over a GitHub Gist",
+				"mcp": "An MCP server inside a VS Code extension",
+				"builds": "One Angular app, two builds"
 			},
-			{
-				"title": "B2B Platform Engineering",
-				"description": "Re-engineering legacy systems and developing enterprise-grade solutions for complex business requirements"
-			},
-			{
-				"title": "Developer Tools & Productivity",
-				"description": "Creating VS Code extensions and automation tools that improve team efficiency and workflow optimization"
-			},
-			{
-				"title": "AI-Powered Development",
-				"description": "Using AI tools (GitHub Copilot, Claude Code, Codex) daily to accelerate delivery and improve code quality"
+			"aria": {
+				"live": "Live app: the Plans web app (opens in a new tab)",
+				"github": "VS Code Todo on GitHub (opens in a new tab)",
+				"marketplace": "VS Code Todo on the VS Code Marketplace (opens in a new tab)"
 			}
-		]
+		},
+		"cargocrew": {
+			"img": "CargoCrew recruitment platform screenshot",
+			"title": "CargoCrew (Client Project)",
+			"description": "A recruitment platform for airport logistics, built solo as a freelance project. A multi-step form collects personal details, a photo taken with the device camera and a digital signature. A serverless Node.js function turns them into a PDF, emails it to the agency, and sends the driver the list of documents to reply with. Nothing is stored on the platform.",
+			"aria": {
+				"live": "View live: the CargoCrew website (opens in a new tab)"
+			}
+		},
+		"lastlog": {
+			"img": "Last Log extension screenshot",
+			"title": "Last Log (VS Code Extension)",
+			"description": "A TypeScript VS Code extension that provides easy access to the most recent log files. Additionally, it offers optional automated cleanup of older files and empty directories based on configurable age settings. It works with any file type but can be configured to target specific file extensions.",
+			"aria": {
+				"marketplace": "Last Log on the VS Code Marketplace (opens in a new tab)",
+				"github": "Last Log on GitHub (opens in a new tab)"
+			}
+		},
+		"xmldiff": {
+			"img": "Smart XML Diff screenshot",
+			"title": "Smart XML Diff (VS Code Extension)",
+			"description": "A TypeScript VS Code extension for intelligent XML comparison that focuses on meaningful structural differences. The extension intelligently sorts distinct sibling nodes, normalizes formatting, and standardizes whitespace to highlight only structural and content differences. It leverages VS Code's native diff view with context menu integration and optional attribute sorting.",
+			"aria": {
+				"marketplace": "Smart XML Diff on the VS Code Marketplace (opens in a new tab)",
+				"github": "Smart XML Diff on GitHub (opens in a new tab)"
+			}
+		},
+		"mpd": {
+			"img": "Multi-Projects Diff screenshot",
+			"title": "Multi-Projects Diff (VS Code Extension)",
+			"description": "A TypeScript VS Code extension that compares the active file with the same file in other projects. One-click actions open split-screen diffs, sync content and manage files. Diffs run in parallel on Node worker threads, so the editor stays responsive. Zero telemetry, MIT licensed.",
+			"aria": {
+				"marketplace": "Multi-Projects Diff on the VS Code Marketplace (opens in a new tab)",
+				"github": "Multi-Projects Diff on GitHub (opens in a new tab)"
+			}
+		}
 	},
 	"techStack": {
 		"title": "Tech stack",
 		"categories": {
 			"frontend": {
 				"title": "Frontend",
-				"technologies": ["React", "Next.js", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS", "Tailwind CSS"]
+				"technologies": [
+					"React",
+					"Next.js",
+					"Angular",
+					"Vue.js",
+					"TypeScript",
+					"JavaScript",
+					"HTML5",
+					"CSS3",
+					"SASS",
+					"Tailwind CSS"
+				]
 			},
 			"backend": {
 				"title": "Backend",
-				"technologies": ["Node.js", "Express", "REST APIs", "GraphQL"]
+				"technologies": [
+					"Node.js",
+					"Express",
+					"REST APIs",
+					"GraphQL"
+				]
 			},
 			"devops": {
 				"title": "DevOps & Tools",
-				"technologies": ["Git", "GitHub Actions", "Docker", "CI/CD", "Webpack", "Parcel", "npm"]
+				"technologies": [
+					"Git",
+					"GitHub Actions",
+					"Docker",
+					"CI/CD",
+					"Webpack",
+					"Parcel",
+					"npm"
+				]
 			},
 			"other": {
 				"title": "Other",
-				"technologies": ["VS Code Extension API", "Redux", "RxJS", "Jest", "Vitest", "Playwright", "Agile/Scrum"]
+				"technologies": [
+					"VS Code Extension API",
+					"Redux",
+					"RxJS",
+					"Jest",
+					"Vitest",
+					"Playwright",
+					"Agile/Scrum"
+				]
 			}
 		}
 	},
 	"extensions": {
 		"title": "Published VS Code extensions",
-		"subtitle": "Developer productivity tools used by thousands worldwide",
+		"subtitle": "Open-source tools for everyday work in the editor",
 		"stats": {
 			"downloads": "Installs",
-			"openSource": "Open Source",
-			"rating": "Average Rating",
-			"extensions": "Published Extensions"
+			"extensions": "Published Extensions",
+			"registries": "Registries",
+			"openSource": "Open Source (MIT)"
 		},
-		"cta": "View on Marketplace"
+		"cta": "View on Marketplace",
+		"ctaOpenVsxAria": "Open VSX: publisher profile (opens in a new tab)",
+		"ctaMarketplaceAria": "View on Marketplace: publisher profile on the VS Code Marketplace (opens in a new tab)"
 	},
 	"contact": {
 		"title": "Contact me",
@@ -91,7 +160,8 @@
 			"name": "Your Name",
 			"email": "Email",
 			"message": "Message",
-			"send": "Send"
+			"send": "Send",
+			"sendAria": "Send contact form"
 		}
 	}
 }

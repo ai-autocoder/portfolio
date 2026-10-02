@@ -7,11 +7,11 @@
 	},
 	"banner": {
 		"name": "Francesco Anzalone",
-		"title": "Full Stack Software Engineer",
+		"title": "Full Stack Developer",
 		"badges": {
-			"tools": "Creatore di Tool per Developer",
-			"ai": "Sviluppo Potenziato da AI",
-			"enterprise": "Soluzioni Enterprise"
+			"stack": "TypeScript &amp; Node.js",
+			"installs": "Oltre 17.000 installazioni",
+			"location": "Nel Regno Unito"
 		},
 		"cta": {
 			"projects": "Guarda i progetti",
@@ -24,65 +24,134 @@
 			"Realizzo applicazioni web che risolvono problemi aziendali concreti.",
 			"Negli ultimi quattro anni ho re-ingegnerizzato una piattaforma B2B legacy usata dai principali tour operator europei, portando una codebase compatibile solo con IE a un front-end moderno senza interrompere il business che ci gira sopra.",
 			"Come freelance ho progettato e consegnato end-to-end una piattaforma di recruiting: front-end Next.js, back-end serverless Node.js, generazione PDF, email transazionali e pipeline CI/CD, senza conservare alcun dato dei candidati. Uno sviluppatore, circa tre mesi.",
-			"Ho pubblicato quattro estensioni VS Code con oltre 16.000 installazioni, tutte nate da problemi reali di workflow. Uso quotidianamente tool di sviluppo AI (Claude Code, GitHub Copilot) per produrre codice migliore, più velocemente.",
+			"Ho pubblicato quattro estensioni VS Code con oltre 17.000 installazioni, tutte nate da problemi reali di workflow. Uso quotidianamente tool di sviluppo AI (Claude Code, GitHub Copilot) per produrre codice migliore, più velocemente.",
 			"Vivo nel Regno Unito, disponibile per ruoli remoti o ibridi in team software enterprise."
 		]
 	},
 	"projects": {
-		"header": "Progetti"
-	},
-	"services": {
-		"title": "Servizi & competenze",
-		"items": [
-			{
-				"title": "Sviluppo Full-Stack",
-				"description": "Sviluppo di applicazioni web scalabili con framework moderni (React, Angular, Vue.js) e sistemi backend robusti (Node.js, TypeScript)"
+		"header": "Progetti",
+		"links": {
+			"liveApp": "Apri l'app",
+			"viewLive": "Vedi il sito"
+		},
+		"postsLabel": "Articoli (in inglese):",
+		"todo": {
+			"img": "Screenshot dell'estensione VS Code Todo",
+			"title": "VS Code Todo (Estensione + PWA)",
+			"description": "Un'estensione VS Code per todo e note (oltre 9.000 installazioni) e Plans, una PWA che apre le stesse liste sul telefono. Un unico monorepo TypeScript: un'app Angular compilata in due build (webview e PWA), un motore di sincronizzazione condiviso che unisce le modifiche tramite un GitHub Gist con un three-way merge, un Cloudflare Worker che inoltra il device flow OAuth di GitHub per la PWA, e un server MCP locale con cui gli agenti AI leggono e aggiornano le liste.",
+			"posts": {
+				"auth": "Accesso a GitHub tramite un Cloudflare Worker",
+				"merge": "Un three-way merge su un GitHub Gist",
+				"mcp": "Un server MCP dentro un'estensione VS Code",
+				"builds": "Un'app Angular, due build"
 			},
-			{
-				"title": "Piattaforme B2B Enterprise",
-				"description": "Modernizzazione di sistemi legacy e sviluppo di soluzioni enterprise per requisiti aziendali complessi"
-			},
-			{
-				"title": "Developer Tools & Produttività",
-				"description": "Creazione di estensioni VS Code e tool di automazione che migliorano l'efficienza del team e ottimizzano i workflow"
-			},
-			{
-				"title": "Sviluppo Potenziato da AI",
-				"description": "Uso quotidiano di tool AI (GitHub Copilot, Claude Code, Codex) per accelerare la delivery e migliorare la qualità del codice"
+			"aria": {
+				"live": "Apri l'app: la web app Plans (si apre in una nuova scheda)",
+				"github": "VS Code Todo su GitHub (si apre in una nuova scheda)",
+				"marketplace": "VS Code Todo sul VS Code Marketplace (si apre in una nuova scheda)"
 			}
-		]
+		},
+		"cargocrew": {
+			"img": "Screenshot della piattaforma di recruiting CargoCrew",
+			"title": "CargoCrew (Progetto cliente)",
+			"description": "Una piattaforma di recruiting per la logistica aeroportuale, realizzata da solo come progetto freelance. Un form a più step raccoglie dati personali, una foto scattata con la fotocamera del dispositivo e una firma digitale. Una funzione serverless Node.js li trasforma in un PDF, lo invia via email all'agenzia e manda al candidato l'elenco dei documenti da inviare in risposta. Nessun dato viene conservato sulla piattaforma.",
+			"aria": {
+				"live": "Vedi il sito: CargoCrew (si apre in una nuova scheda)"
+			}
+		},
+		"lastlog": {
+			"img": "Screenshot dell'estensione Last Log",
+			"title": "Last Log (Estensione VS Code)",
+			"description": "Un'estensione VS Code in TypeScript che dà accesso rapido ai file di log più recenti. Offre anche la pulizia automatica, opzionale, dei file più vecchi e delle cartelle vuote in base a un'età configurabile. Funziona con qualsiasi tipo di file, ma può essere limitata a estensioni specifiche.",
+			"aria": {
+				"marketplace": "Last Log sul VS Code Marketplace (si apre in una nuova scheda)",
+				"github": "Last Log su GitHub (si apre in una nuova scheda)"
+			}
+		},
+		"xmldiff": {
+			"img": "Screenshot di Smart XML Diff",
+			"title": "Smart XML Diff (Estensione VS Code)",
+			"description": "Un'estensione VS Code in TypeScript per confrontare file XML concentrandosi sulle differenze strutturali significative. Ordina i nodi fratelli distinti, normalizza la formattazione e uniforma gli spazi, così restano visibili solo le differenze di struttura e di contenuto. Usa la vista diff nativa di VS Code, con integrazione nel menu contestuale e ordinamento opzionale degli attributi.",
+			"aria": {
+				"marketplace": "Smart XML Diff sul VS Code Marketplace (si apre in una nuova scheda)",
+				"github": "Smart XML Diff su GitHub (si apre in una nuova scheda)"
+			}
+		},
+		"mpd": {
+			"img": "Screenshot di Multi-Projects Diff",
+			"title": "Multi-Projects Diff (Estensione VS Code)",
+			"description": "Un'estensione VS Code in TypeScript che confronta il file attivo con lo stesso file in altri progetti. Con un clic apre diff affiancati, sincronizza il contenuto e gestisce i file. I diff girano in parallelo su worker thread di Node, così l'editor resta reattivo. Zero telemetria, licenza MIT.",
+			"aria": {
+				"marketplace": "Multi-Projects Diff sul VS Code Marketplace (si apre in una nuova scheda)",
+				"github": "Multi-Projects Diff su GitHub (si apre in una nuova scheda)"
+			}
+		}
 	},
 	"techStack": {
 		"title": "Stack tecnologico",
 		"categories": {
 			"frontend": {
 				"title": "Frontend",
-				"technologies": ["React", "Next.js", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS", "Tailwind CSS"]
+				"technologies": [
+					"React",
+					"Next.js",
+					"Angular",
+					"Vue.js",
+					"TypeScript",
+					"JavaScript",
+					"HTML5",
+					"CSS3",
+					"SASS",
+					"Tailwind CSS"
+				]
 			},
 			"backend": {
 				"title": "Backend",
-				"technologies": ["Node.js", "Express", "REST APIs", "GraphQL"]
+				"technologies": [
+					"Node.js",
+					"Express",
+					"REST APIs",
+					"GraphQL"
+				]
 			},
 			"devops": {
 				"title": "DevOps & Strumenti",
-				"technologies": ["Git", "GitHub Actions", "Docker", "CI/CD", "Webpack", "Parcel", "npm"]
+				"technologies": [
+					"Git",
+					"GitHub Actions",
+					"Docker",
+					"CI/CD",
+					"Webpack",
+					"Parcel",
+					"npm"
+				]
 			},
 			"other": {
 				"title": "Altro",
-				"technologies": ["VS Code Extension API", "Redux", "RxJS", "Jest", "Vitest", "Playwright", "Agile/Scrum"]
+				"technologies": [
+					"VS Code Extension API",
+					"Redux",
+					"RxJS",
+					"Jest",
+					"Vitest",
+					"Playwright",
+					"Agile/Scrum"
+				]
 			}
 		}
 	},
 	"extensions": {
 		"title": "Estensioni VS Code pubblicate",
-		"subtitle": "Tool di produttività usati da migliaia di developer in tutto il mondo",
+		"subtitle": "Tool open source per il lavoro quotidiano nell'editor",
 		"stats": {
 			"downloads": "Installazioni",
-			"openSource": "Open Source",
-			"rating": "Rating Medio",
-			"extensions": "Estensioni Pubblicate"
+			"extensions": "Estensioni Pubblicate",
+			"registries": "Registry",
+			"openSource": "Open Source (MIT)"
 		},
-		"cta": "Vai al Marketplace"
+		"cta": "Vai al Marketplace",
+		"ctaOpenVsxAria": "Open VSX: profilo publisher (si apre in una nuova scheda)",
+		"ctaMarketplaceAria": "Vai al Marketplace: profilo publisher sul VS Code Marketplace (si apre in una nuova scheda)"
 	},
 	"contact": {
 		"title": "Contattami",
@@ -91,7 +160,8 @@
 			"name": "Nome",
 			"email": "Email",
 			"message": "Messaggio",
-			"send": "Invia"
+			"send": "Invia",
+			"sendAria": "Invia il modulo di contatto"
 		}
 	}
 }

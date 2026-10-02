@@ -85,14 +85,6 @@
 }
 
 // Staggered animations for grid items
-.services-grid .service-card.scroll-visible {
-	@for $i from 1 through 4 {
-		&:nth-child(#{$i}) {
-			animation-delay: #{($i - 1) * 0.1}s;
-		}
-	}
-}
-
 .tech-category.scroll-visible {
 	@for $i from 1 through 4 {
 		&:nth-child(#{$i}) {
@@ -495,80 +487,6 @@ svg:hover {
 }
 
 // =============================================================================
-// Services Section
-// =============================================================================
-
-.services {
-	padding: $space-16 $space-4;
-	margin: $space-16 0;
-	background-color: $background-card;
-	position: relative;
-
-	// Subtle top border accent
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: min(200px, 30%);
-		height: 2px;
-		background: linear-gradient(90deg, transparent, $accent-primary, transparent);
-	}
-
-	.services-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: $space-8;
-		max-width: $container-max-width;
-		margin: 0 auto;
-	}
-}
-
-.service-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	padding: $space-10;
-	background-color: $background-deep;
-	border: 1px solid $border-subtle;
-	border-radius: $radius-lg;
-	transition: transform $transition-base, box-shadow $transition-base,
-		border-color $transition-base;
-
-	&:hover {
-		transform: translateY(-4px);
-		border-color: $border-accent;
-		box-shadow: $shadow-glow;
-	}
-
-	.service-icon {
-		font-size: 2.5em;
-		margin-bottom: $space-6;
-
-		svg {
-			fill: $accent-primary;
-			filter: drop-shadow(0 0 8px rgba($accent-primary, 0.3));
-		}
-	}
-
-	.service-title {
-		font-family: $font-display;
-		font-size: $text-lg;
-		margin-bottom: $space-4;
-		color: $text-primary;
-	}
-
-	.service-description {
-		color: $text-secondary;
-		max-width: 45ch;
-		font-size: $text-sm;
-		line-height: 1.6;
-	}
-}
-
-// =============================================================================
 // Tech Stack Section
 // =============================================================================
 
@@ -696,6 +614,10 @@ svg:hover {
 
 	.extensions-cta {
 		margin-top: $space-8;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: $space-4;
 	}
 }
 
@@ -752,7 +674,7 @@ svg:hover {
 		font-size: $text-xs;
 
 		span {
-			color: $accent-primary;
+			color: $accent-text;
 			background: $accent-muted;
 			padding: $space-1 $space-3;
 			border-radius: $radius-sm;
@@ -790,15 +712,48 @@ svg:hover {
 		line-height: 1.6;
 	}
 
+	.project-posts {
+		width: 100%;
+		padding: 0 $space-6 $space-4;
+		text-align: left;
+		font-size: $text-sm;
+
+		.project-posts-label {
+			color: $text-tertiary;
+			margin-bottom: $space-1;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		a {
+			display: inline-block;
+			padding: $space-1 0;
+			color: $accent-primary;
+			text-decoration: underline;
+			text-underline-offset: 0.2em;
+
+			&:hover {
+				color: $text-primary;
+			}
+		}
+	}
+
 	.project-links {
 		margin-top: auto;
 		display: flex;
+		flex-wrap: wrap;
 		width: 100%;
 		padding: $space-6;
 		align-items: center;
 		justify-content: center;
 		gap: $space-4;
 		border-top: 1px solid $border-subtle;
+
+		a {
+			white-space: nowrap;
+		}
 	}
 }
 
@@ -972,6 +927,10 @@ svg:hover {
 			padding: $space-4 $space-8;
 		}
 
+		.project-posts {
+			padding: 0 $space-8 $space-4;
+		}
+
 		.project-screenshot-container {
 			max-height: 250px;
 		}
@@ -994,10 +953,6 @@ svg:hover {
 		}
 	}
 
-	.services .services-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
 	.tech-stack .tech-categories {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -1008,10 +963,6 @@ svg:hover {
 }
 
 @media screen and (min-width: $breakpoint-xl) {
-	.services .services-grid {
-		grid-template-columns: repeat(4, 1fr);
-	}
-
 	.extensions-stats .stats-grid {
 		grid-template-columns: repeat(4, 1fr);
 	}
