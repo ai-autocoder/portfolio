@@ -11,6 +11,7 @@
 		"start-chrome": "parcel --open chrome",
 		"prebuild": "npm run generate-blog",
 		"build": "parcel build",
+		"postbuild": "node scripts/copy-og-image.js",
 		"lint": "eslint src"
 	},
 	"devDependencies": {
