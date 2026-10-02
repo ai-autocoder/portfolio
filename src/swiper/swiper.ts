@@ -69,4 +69,11 @@ export default function initializeSwiper() {
 
 	gridQuery.addEventListener("change", sync);
 	sync();
+
+	// autoHeight only measures on slide change, but a card also changes height
+	// when its text is translated or web fonts finish loading
+	const resizeObserver = new ResizeObserver(() => swiper?.updateAutoHeight(0));
+	container
+		.querySelectorAll(".project-card")
+		.forEach((card) => resizeObserver.observe(card));
 }
