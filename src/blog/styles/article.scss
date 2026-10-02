@@ -88,7 +88,7 @@
 
 	.tag {
 		background: $accent-muted;
-		color: $accent-primary;
+		color: $accent-text;
 		padding: $space-1 $space-3;
 		border-radius: $radius-sm;
 		font-size: $text-sm;
@@ -254,7 +254,8 @@
 		// background above (replaces the former CDN atom-one-dark theme)
 		.hljs-comment,
 		.hljs-quote {
-			color: #565f89;
+			// Lightened from Tokyo Night #565f89 to reach 4.5:1 on the pre background
+			color: #8089b3;
 			font-style: italic;
 		}
 
@@ -323,7 +324,7 @@
 	code {
 		font-family: $font-mono;
 		background: $accent-muted;
-		color: $accent-primary;
+		color: $accent-text;
 		padding: 0.2em 0.5em;
 		border-radius: $radius-sm;
 		font-size: 0.9em;
@@ -355,7 +356,7 @@
 
 		th {
 			background: $accent-muted;
-			color: $accent-primary;
+			color: $accent-text;
 			font-weight: 600;
 		}
 
@@ -401,12 +402,12 @@
 
 		a {
 			color: $accent-primary;
-			text-decoration: none;
+			text-decoration: underline;
+			text-underline-offset: 0.2em;
 			transition: opacity $transition-base;
 
 			&:hover {
 				opacity: 0.8;
-				text-decoration: underline;
 			}
 		}
 	}
