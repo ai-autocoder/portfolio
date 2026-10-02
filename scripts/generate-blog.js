@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
-import { parseFrontmatter, validateFrontmatter } from './utils/frontmatter-validator.js';
+import { parseFrontmatter, validateFrontmatter, validateContent } from './utils/frontmatter-validator.js';
 import { parseMarkdown } from './utils/markdown-parser.js';
 import { generateSeoTags, renderMetaTags, formatDate } from './utils/seo-generator.js';
 
@@ -102,6 +102,7 @@ function processMarkdownFile(filename) {
   // Parse and validate frontmatter
   const { frontmatter, content } = parseFrontmatter(fileContent, filename);
   validateFrontmatter(frontmatter, filename);
+  validateContent(content, filename);
 
   // Unpublished posts are still validated above, but get no page and no
   // index entry. Returning null (not throwing) keeps the build green.

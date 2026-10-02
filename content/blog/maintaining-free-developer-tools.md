@@ -7,8 +7,6 @@ readTime: 8
 image: "../media/img/blog/maintaining-free-developer-tools.svg"
 ---
 
-# What 16,000 Installs Taught Me About Maintaining Free Developer Tools
-
 I maintain four VS Code extensions, published on both the VS Code Marketplace and Open VSX. Counting both registries, the installs look like this (September 2026):
 
 - VS Code Todo: 9,100+

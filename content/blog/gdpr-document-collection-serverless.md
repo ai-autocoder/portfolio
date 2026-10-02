@@ -7,8 +7,6 @@ readTime: 8
 image: "../media/img/blog/gdpr-document-collection-serverless.svg"
 ---
 
-# Sensitive Candidate Data Without a Database: GDPR on Serverless
-
 The requirement sounded simple: candidates register online, and the agency receives a complete registration pack. I [wrote about the overall architecture](serverless-recruitment-portal-3-months.html) of that project earlier; this post is about the part that kept me up at night.
 
 Because look at what "register online" meant in practice. Name, address and date of birth. National Insurance number. Right-to-work share code. Bank details for payroll. A photo taken with the device camera. A handwritten signature. And a health questionnaire, which under GDPR is special category data, the kind with the strictest rules of all.

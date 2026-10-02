@@ -7,8 +7,6 @@ readTime: 9
 image: "../media/img/blog/serverless-recruitment-portal-3-months.svg"
 ---
 
-# Building a Recruitment Portal Solo in 3 Months: Serverless on a Budget
-
 A small recruitment agency needed its candidates to register online. Not a CV upload: a full registration, with personal details, right-to-work information, bank details for payroll, a health questionnaire, a photo and a signature, arriving at the agency as one complete pack.
 
 They wanted a portal: candidates register online, sign digitally, and the agency receives everything structured and complete. Budget: small. Team: me. Timeline: about three months.

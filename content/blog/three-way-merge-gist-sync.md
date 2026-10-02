@@ -7,8 +7,6 @@ readTime: 9
 image: "../media/img/blog/three-way-merge-gist-sync.svg"
 ---
 
-# Syncing Todos Through a GitHub Gist: A Three-Way Merge, 149 Tests
-
 VS Code Todo has had GitHub Gist sync since version 2.0.0: your todos and notes live in a secret gist in your own GitHub account, and every device you use reads and writes it. There's no server of mine in the middle, and no database. Just a JSON file per list.
 
 That sounds simple until two devices edit the same list. And with a phone companion app, that stops being an edge case and becomes the normal case: you tick something off on your phone while your laptop, unsynced, still has edits of its own.

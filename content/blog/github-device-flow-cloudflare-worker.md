@@ -7,8 +7,6 @@ readTime: 8
 image: "../media/img/blog/github-device-flow-cloudflare-worker.svg"
 ---
 
-# Signing In to GitHub From a PWA With a 117-Line Cloudflare Worker
-
 VS Code Todo is a todo and notes extension with over 9,000 installs across the VS Code Marketplace and Open VSX. Its lists can already sync through a secret GitHub Gist. Its companion app, a PWA called [Plans](https://plans-app.pages.dev), opens the same lists on a phone.
 
 One constraint shaped everything: no application server. The extension and the PWA are peers that read and write the same gist, and the only thing I wanted to host was static files. That plan survived right up until sign-in, where the browser said no.

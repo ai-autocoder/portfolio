@@ -7,8 +7,6 @@ readTime: 8
 image: "../media/img/blog/adding-mcp-server-to-vscode-extension.svg"
 ---
 
-# An MCP Server Inside a VS Code Extension: What It Took
-
 VS Code Todo keeps todos and notes inside the editor, scoped to your profile, your workspace or a single file. It's published on both the VS Code Marketplace and Open VSX.
 
 Then AI agents moved into the editor, and there was an obvious gap. An agent working in my workspace could read every file in it, but not the task list sitting in the sidebar. The lists live in the extension's own state, not in the repo, so to the agent they didn't exist.

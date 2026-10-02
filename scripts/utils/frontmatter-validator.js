@@ -94,3 +94,26 @@ export function validateFrontmatter(data, filePath) {
 
   return true;
 }
+
+/**
+ * Validate the markdown body
+ * @param {string} content - Markdown content without frontmatter
+ * @param {string} filePath - Path to file (for error messages)
+ * @throws {Error} If validation fails
+ */
+export function validateContent(content, filePath) {
+  // The article template renders the title as the page's only h1, so a
+  // "# " heading in the body would show the title twice. Fenced code is
+  // skipped: "# " there is a shell or YAML comment, not a heading.
+  const outsideFences = content.replace(/^(```|~~~)[\s\S]*?^\1[^\n]*$/gm, '');
+  const h1 = outsideFences.match(/^# .*/m);
+
+  if (h1) {
+    throw new Error(
+      `❌ Validation errors in ${filePath}:\n` +
+      `   - remove the "# " heading ("${h1[0].slice(2, 60)}"): the template renders the title as the h1; start sections at "##"`
+    );
+  }
+
+  return true;
+}

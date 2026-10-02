@@ -7,8 +7,6 @@ readTime: 7
 image: "../media/img/blog/modernizing-ie-only-b2b-platform.svg"
 ---
 
-# Modernizing an IE-Only Front End With No Tests and 40+ Variants
-
 For the last four years I've worked on the front end of a B2B platform that customers run their business on. When the work started, that front end ran in one browser: Internet Explorer.
 
 Not "worked best in IE". Only IE. ActiveX-era code, event handling through `attachEvent`, element lookups through `document.all`, and browser sniffing that actively turned other browsers away. What forced the change wasn't a strategy meeting. Microsoft ended support for Internet Explorer, and a front end that only runs in IE stops being an option on Microsoft's schedule, not yours.

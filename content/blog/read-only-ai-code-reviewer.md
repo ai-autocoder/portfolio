@@ -6,8 +6,6 @@ tags: [ai, code-review, claude-code, legacy-code, developer-tooling]
 readTime: 7
 ---
 
-# Claude Code as a Code Reviewer: A Read-Only Subagent and Guard Hooks
-
 My team is rebuilding a legacy UI one screen at a time, while customers keep working in the old one. Every branch holds both versions: the legacy UI, which must not change, and the new one, where all the work happens.
 
 Code review on the team runs on a rotation. Work is committed to SVN, the UI team tracks it on Trello cards, and a company-wide issue tracker handles the rest, releases included. When it's your turn, you're the one checking.

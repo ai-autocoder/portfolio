@@ -7,8 +7,6 @@ readTime: 7
 image: "../media/img/blog/one-angular-app-two-builds.svg"
 ---
 
-# One Angular App, Two Builds: A VS Code Webview That's Also a PWA
-
 VS Code Todo's interface is an Angular app running inside a VS Code webview. It renders Markdown, Mermaid diagrams and KaTeX, handles tags and drag-and-drop, and it's the UI that 9,000+ installs have been using.
 
 So when I built Plans, a companion PWA that opens the same lists on a phone, the expensive mistake would have been writing a second UI. Two implementations of Markdown rendering, two sets of tag rules, two drag-and-drop behaviours, drifting apart from day one.
