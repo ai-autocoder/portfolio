@@ -71,7 +71,6 @@ export function updateContent() {
 		"project-todo-live": ["projects.links.liveApp", "aria-label.attribute.projects.todo.aria.live"],
 		"project-todo-github": "aria-label.attribute.projects.todo.aria.github",
 		"project-todo-marketplace": "aria-label.attribute.projects.todo.aria.marketplace",
-		"project-iemcp-img": "alt.attribute.projects.iemcp.img",
 		"project-iemcp-video": "aria-label.attribute.projects.iemcp.video",
 		"project-iemcp-title": "projects.iemcp.title",
 		"project-iemcp-description": "projects.iemcp.description",
