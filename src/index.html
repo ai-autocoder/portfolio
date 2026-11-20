@@ -363,7 +363,8 @@
 					<!-- IE MCP Harness -->
 					<div class="swiper-slide">
 						<article class="project-card">
-							<div class="project-screenshot-container">
+							<!-- The lazy image is the video's poster: a poster attribute would load eagerly -->
+							<div class="project-screenshot-container project-video">
 								<picture>
 									<source
 										type="image/webp"
@@ -378,11 +379,41 @@
 										loading="lazy"
 										id="project-iemcp-img"
 										src="./media/img/ie-mcp-harness/preview.png"
-										alt="IE MCP Harness screenshot"
+										alt="A terminal listing MCP tool calls next to Edge in IE mode, which shows the values a test form posted"
 										width="613"
 										height="461"
 									/>
 								</picture>
+								<video
+									class="project-screenshot"
+									id="project-iemcp-video"
+									muted
+									loop
+									playsinline
+									preload="none"
+									width="613"
+									height="460"
+									aria-label="Demo video: a script makes MCP tool calls that fill in and send a test form in Edge IE mode"
+								>
+									<source
+										src="./media/video/ie-mcp-harness-demo.mp4"
+										type="video/mp4"
+									/>
+								</video>
+								<button
+									class="project-video-toggle"
+									id="project-iemcp-video-toggle"
+									type="button"
+									aria-label="Play demo video"
+									hidden
+								>
+									<svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path d="M8 5v14l11-7z" />
+									</svg>
+									<svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+									</svg>
+								</button>
 							</div>
 							<div class="project-technology-list">
 								<span>Python</span>

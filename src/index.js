@@ -4,6 +4,7 @@ import {
 	setupLanguageSwitch,
 } from "./locales/language.js";
 import initializeSwiper from "./swiper/swiper.ts";
+import initializeProjectVideos from "./project-video.js";
 
 initializeI18next().then(() => {
 	updateContent();
@@ -25,6 +26,7 @@ if (openMenuBtn && closeMenuBtn && navElem) {
 }
 
 initializeSwiper();
+initializeProjectVideos();
 
 // Scroll-triggered entrance animations
 const initScrollAnimations = () => {
