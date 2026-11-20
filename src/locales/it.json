@@ -57,7 +57,6 @@
 			}
 		},
 		"iemcp": {
-			"img": "Un terminale con l'elenco delle chiamate ai tool MCP accanto a Edge in modalità IE, che mostra i valori inviati da un modulo di prova",
 			"video": "Video dimostrativo: uno script esegue chiamate ai tool MCP che compilano e inviano un modulo di prova in Edge in modalità IE",
 			"title": "IE MCP Harness (Server MCP)",
 			"description": "Un server MCP che permette agli agenti AI di sviluppo (Claude Code, Codex, Gemini CLI) di leggere e pilotare web app legacy che girano solo su IE, in Microsoft Edge in modalità IE, dove Playwright e gli altri strumenti moderni per browser non funzionano. Creato per la migrazione di un'app legacy solo IE al lavoro, oggi fa parte del setup Claude Code del team. Cattura il traffico di rete tramite un proxy locale e raggiunge finestre modali e pop-up via COM, con oltre 800 unit test sulla CI Windows. Partito da un piccolo progetto MIT, oggi è una release stabile 1.0.",

@@ -46,15 +46,17 @@ export default function initializeProjectVideos() {
 		if (i18next.isInitialized) render();
 		else i18next.on("initialized", render);
 
+		// a press acts at once, even with the card only partly on screen
 		toggle.addEventListener("click", () => {
 			choice = video.paused ? "play" : "pause";
-			sync();
+			if (choice === "play") video.play().catch(() => {});
+			else video.pause();
 		});
 		toggle.hidden = false;
 
 		new IntersectionObserver(
-			([entry]) => {
-				onScreen = entry.isIntersecting;
+			(entries) => {
+				onScreen = entries[entries.length - 1].isIntersecting; // the newest state
 				sync();
 			},
 			{ threshold: 0.5 }
