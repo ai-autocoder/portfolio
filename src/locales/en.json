@@ -35,6 +35,7 @@
 			"viewLive": "View live"
 		},
 		"postsLabel": "Write-ups:",
+		"backgroundLabel": "Background:",
 		"todo": {
 			"img": "VS Code Todo extension screenshot",
 			"title": "VS Code Todo (Extension + PWA)",
@@ -49,6 +50,17 @@
 				"live": "Live app: the Plans web app (opens in a new tab)",
 				"github": "VS Code Todo on GitHub (opens in a new tab)",
 				"marketplace": "VS Code Todo on the VS Code Marketplace (opens in a new tab)"
+			}
+		},
+		"iemcp": {
+			"img": "IE MCP Harness screenshot",
+			"title": "IE MCP Harness (MCP Server)",
+			"description": "An MCP server that lets AI coding agents (Claude Code, Codex, Gemini CLI) read and drive legacy IE-only web apps in Microsoft Edge IE mode, which Playwright and other modern browser tools can't run. Built for a legacy IE-only app migration at work, it is now part of the team's Claude Code setup. It captures network traffic through a local proxy and reaches modal dialogs and pop-ups over COM, with 800+ unit tests on Windows CI. Grown from a small MIT project into a stable 1.0.",
+			"posts": {
+				"modernizing": "Modernizing an IE-only front end"
+			},
+			"aria": {
+				"github": "IE MCP Harness on GitHub (opens in a new tab)"
 			}
 		},
 		"cargocrew": {
