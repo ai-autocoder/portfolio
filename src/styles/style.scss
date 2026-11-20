@@ -695,6 +695,86 @@ svg:hover {
 		object-fit: cover;
 	}
 
+	// Demo clip over its poster image: hidden until it first plays, so the lazy image is
+	// what shows before that (see project-video.js)
+	.project-video {
+		position: relative;
+
+		video {
+			position: absolute;
+			inset: 0 0 auto;
+			opacity: 0;
+		}
+
+		&.is-started video {
+			opacity: 1;
+		}
+	}
+
+	.project-video-toggle {
+		position: absolute;
+		right: $space-3;
+		bottom: $space-3;
+		display: grid;
+		place-items: center;
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		border: 1px solid $border-default;
+		border-radius: $radius-full;
+		background: rgba($background-deep, 0.8);
+		color: $text-primary;
+		cursor: pointer;
+		transition: background-color $transition-base;
+
+		&[hidden] {
+			display: none;
+		}
+
+		&:hover {
+			background: $background-elevated;
+		}
+
+		&:focus-visible {
+			outline: 2px solid $accent-primary;
+			outline-offset: 2px;
+		}
+
+		svg {
+			width: 22px;
+			height: 22px;
+			fill: currentColor;
+		}
+
+		.icon-pause {
+			display: none;
+		}
+	}
+
+	// Paused: a larger play button in the middle of the poster
+	.project-video:not(.is-playing) .project-video-toggle {
+		right: 50%;
+		bottom: 50%;
+		width: 64px;
+		height: 64px;
+		transform: translate(50%, 50%);
+
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	.project-video.is-playing .project-video-toggle {
+		.icon-play {
+			display: none;
+		}
+
+		.icon-pause {
+			display: block;
+		}
+	}
+
 	.project-title {
 		font-family: $font-display;
 		font-size: $text-lg;
